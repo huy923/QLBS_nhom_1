@@ -59,5 +59,15 @@ namespace WindowsFormsApp5.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap backgrounds {
+            get {
+                object obj = ResourceManager.GetObject("backgrounds", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
