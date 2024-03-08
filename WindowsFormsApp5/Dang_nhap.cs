@@ -2,18 +2,25 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace WindowsFormsApp5
 {
-    public partial class Trang_chu : Form
+    public partial class Dang_nhap : Form
     {
-        public Trang_chu()
+        public Dang_nhap()
         {
+            string connectstring = @"Data Source=DESKTOP-DQ8VDI6\SQLEXPRESS;Initial Catalog=QLBS;Integrated Security=True";
+            SqlConnection con;
+            SqlCommand cmd;
+            SqlDataAdapter adt;
+            DataTable dt = new DataTable();
             InitializeComponent();
         }
 
@@ -43,6 +50,18 @@ namespace WindowsFormsApp5
 
         private void pictureBox4_Click_1(object sender, EventArgs e)
         {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
 
         }
     }

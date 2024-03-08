@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp5
 {
-    partial class Trang_chu
+    partial class Dang_nhap
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Trang_chu));
+            System.Windows.Forms.CheckBox checkBox1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dang_nhap));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -37,12 +38,34 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pass = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // checkBox1
+            // 
+            checkBox1.AllowDrop = true;
+            checkBox1.BackColor = System.Drawing.SystemColors.Window;
+            checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            checkBox1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            checkBox1.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            checkBox1.ForeColor = System.Drawing.SystemColors.Window;
+            checkBox1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            checkBox1.Location = new System.Drawing.Point(110, 421);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new System.Drawing.Size(110, 21);
+            checkBox1.TabIndex = 11;
+            checkBox1.Text = "Remember me";
+            checkBox1.UseVisualStyleBackColor = false;
+            checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // textBox1
             // 
@@ -132,20 +155,49 @@
             this.pass.BackColor = System.Drawing.Color.Transparent;
             this.pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pass.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.pass.Location = new System.Drawing.Point(226, 419);
+            this.pass.Location = new System.Drawing.Point(226, 422);
             this.pass.Name = "pass";
             this.pass.Size = new System.Drawing.Size(120, 17);
             this.pass.TabIndex = 8;
             this.pass.Text = "Fogot password ?";
             // 
-            // Trang_chu
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(111, 623);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 17);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Don\'t have an account ?";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.Location = new System.Drawing.Point(269, 623);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 17);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Sign up";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // Dang_nhap
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.InfoText;
             this.BackgroundImage = global::WindowsFormsApp5.Properties.Resources.backgrounds;
-            this.ClientSize = new System.Drawing.Size(431, 775);
+            this.ClientSize = new System.Drawing.Size(431, 683);
+            this.Controls.Add(checkBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pass);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox5);
@@ -156,10 +208,11 @@
             this.Controls.Add(this.textBox1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.Window;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "Trang_chu";
+            this.Name = "Dang_nhap";
             this.Text = "Đăng  nhập";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -181,6 +234,8 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label pass;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
