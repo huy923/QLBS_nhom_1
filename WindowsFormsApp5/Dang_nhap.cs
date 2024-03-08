@@ -35,5 +35,15 @@ namespace WindowsFormsApp5
         {
 
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
