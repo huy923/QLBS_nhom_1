@@ -103,6 +103,7 @@
     <None Include="Resources\backgrounds.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\1026345.jpg" />
     <Content Include="Resources\avatar.png" />
     <None Include="Resources\avatar1.png" />
     <None Include="Resources\key.png" />

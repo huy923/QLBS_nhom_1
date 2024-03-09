@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.CheckBox checkBox1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dang_nhap));
             this.txtuser = new System.Windows.Forms.TextBox();
             this.txtpass = new System.Windows.Forms.TextBox();
@@ -40,32 +39,13 @@
             this.pass = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // checkBox1
-            // 
-            checkBox1.AllowDrop = true;
-            checkBox1.BackColor = System.Drawing.SystemColors.Window;
-            checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            checkBox1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            checkBox1.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            checkBox1.ForeColor = System.Drawing.SystemColors.Window;
-            checkBox1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            checkBox1.Location = new System.Drawing.Point(110, 421);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new System.Drawing.Size(110, 21);
-            checkBox1.TabIndex = 11;
-            checkBox1.Text = "Remember me";
-            checkBox1.UseVisualStyleBackColor = false;
-            checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // txtuser
             // 
@@ -107,7 +87,7 @@
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::WindowsFormsApp5.Properties.Resources.button;
-            this.pictureBox4.Location = new System.Drawing.Point(150, 469);
+            this.pictureBox4.Location = new System.Drawing.Point(150, 471);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(128, 28);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -155,7 +135,7 @@
             this.pass.BackColor = System.Drawing.Color.Transparent;
             this.pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pass.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.pass.Location = new System.Drawing.Point(226, 422);
+            this.pass.Location = new System.Drawing.Point(236, 425);
             this.pass.Name = "pass";
             this.pass.Size = new System.Drawing.Size(120, 17);
             this.pass.TabIndex = 8;
@@ -187,6 +167,19 @@
             this.label2.Text = "Sign up";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // checkBox
+            // 
+            this.checkBox.AutoSize = true;
+            this.checkBox.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.checkBox.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.checkBox.Location = new System.Drawing.Point(104, 422);
+            this.checkBox.Name = "checkBox";
+            this.checkBox.Size = new System.Drawing.Size(116, 20);
+            this.checkBox.TabIndex = 12;
+            this.checkBox.Text = "Remember me";
+            this.checkBox.UseVisualStyleBackColor = false;
+            // 
             // Dang_nhap
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -195,7 +188,7 @@
             this.BackColor = System.Drawing.SystemColors.InfoText;
             this.BackgroundImage = global::WindowsFormsApp5.Properties.Resources.backgrounds;
             this.ClientSize = new System.Drawing.Size(431, 683);
-            this.Controls.Add(checkBox1);
+            this.Controls.Add(this.checkBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pass);
@@ -236,6 +229,7 @@
         private System.Windows.Forms.Label pass;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox checkBox;
     }
 }
 
