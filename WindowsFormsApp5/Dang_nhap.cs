@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
-
 namespace WindowsFormsApp5
 {
     public partial class Dang_nhap : Form
@@ -25,7 +24,7 @@ namespace WindowsFormsApp5
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -46,6 +45,31 @@ namespace WindowsFormsApp5
         private void pictureBox4_Click_1(object sender, EventArgs e)
         {
 
+            string name = txtuser.Text;
+            string pass = txtpass.Text;
+            try
+            {
+                Mydatabase database = new Mydatabase();
+                string querry = $"SELECT * FROM Tai_khoan WHERE [user] = '{name}' AND pass = '{pass}'";
+                DataTable ta = database.GetData(querry);
+                if (ta.Rows.Count > 0)
+                {
+                    Form2 form2 = new Form2();
+                    form2.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid login details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtuser.Text = "";
+                    txtpass.Text = "";
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
