@@ -42,7 +42,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
-            this.Text = "ba";
+            this.Text = "git";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
 
