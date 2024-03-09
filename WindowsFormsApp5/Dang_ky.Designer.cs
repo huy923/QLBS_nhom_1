@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp5
 {
-    partial class Form1
+    partial class Dang_ky
     {
         /// <summary>
         /// Required designer variable.
@@ -37,7 +37,7 @@
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = global::WindowsFormsApp5.Properties.Resources.button__2_;
-            this.pictureBox5.Location = new System.Drawing.Point(802, -9);
+            this.pictureBox5.Location = new System.Drawing.Point(393, -11);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(50, 48);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -49,13 +49,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.BackgroundImage = global::WindowsFormsApp5.Properties.Resources.pexels;
+            this.BackgroundImage = global::WindowsFormsApp5.Properties.Resources.backgrounds;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(843, 550);
+            this.ClientSize = new System.Drawing.Size(431, 683);
             this.Controls.Add(this.pictureBox5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 

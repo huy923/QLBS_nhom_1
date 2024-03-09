@@ -54,10 +54,9 @@ namespace WindowsFormsApp5
 
         private void label2_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
+            Dang_ky form1 = new Dang_ky();
             form1.Show();
             this.Hide();
-
         }
     }
 }
