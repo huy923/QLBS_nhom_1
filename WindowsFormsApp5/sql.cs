@@ -16,6 +16,6 @@ namespace WindowsFormsApp5
         SqlCommand cmd;
         SqlDataAdapter adt;
         DataTable dt = new DataTable();
-        
     }
+    
 }
