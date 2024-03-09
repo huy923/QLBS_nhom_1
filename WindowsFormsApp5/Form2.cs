@@ -38,6 +38,7 @@ namespace WindowsFormsApp5
                     MessageBox.Show("Không có dữ liệu để hiển thị.");
                 }
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi: " + ex.Message);
