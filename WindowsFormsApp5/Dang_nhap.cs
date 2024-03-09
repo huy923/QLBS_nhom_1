@@ -16,11 +16,6 @@ namespace WindowsFormsApp5
     {
         public Dang_nhap()
         {
-            string connectstring = @"Data Source=DESKTOP-DQ8VDI6\SQLEXPRESS;Initial Catalog=QLBS;Integrated Security=True";
-            SqlConnection con;
-            SqlCommand cmd;
-            SqlDataAdapter adt;
-            DataTable dt = new DataTable();
             InitializeComponent();
         }
 
