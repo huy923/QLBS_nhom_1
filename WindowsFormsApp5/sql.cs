@@ -22,7 +22,7 @@ namespace WindowsFormsApp5
         {
             try
             {
-                SqlDataAdapter mydata = new SqlDataAdapter(sSql, connectstring);
+                SqlDataAdapter mydata = new SqlDataAdapter(sSql, con);
                 DataTable dt = new DataTable();
                 mydata.Fill(dt);
                 return dt;
@@ -31,6 +31,40 @@ namespace WindowsFormsApp5
             {
                 MessageBox.Show(ex.Message);
                 return null;
+            }
+        }
+        public void Insert_user(string user, string pass)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("INSERT INTO Tai_khoan ([user], pass) VALUES (@user, @pass)", con);
+                cmd.Parameters.AddWithValue("@user", user);
+                cmd.Parameters.AddWithValue("@pass", pass);
+                con.Open();
+                int i = cmd.ExecuteNonQuery();
+                con.Close();
+                if (i != 0)
+                {
+                    MessageBox.Show(i + "Data Saved");
+                }
+            }
+            catch (SqlException ex)
+            {
+                if (ex.Number == 2627)
+                {
+                    MessageBox.Show("Username already exists. Please choose another username.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Error :" + ex.Message);
+                }
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
             }
         }
     }

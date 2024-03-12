@@ -42,9 +42,16 @@ namespace WindowsFormsApp5
             Application.Exit();
         }
 
-        private void pictureBox4_Click_1(object sender, EventArgs e)
-        {
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Dang_ky form1 = new Dang_ky();
+            form1.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             string name = txtuser.Text;
             string pass = txtpass.Text;
             try
@@ -64,7 +71,6 @@ namespace WindowsFormsApp5
                     txtuser.Text = "";
                     txtpass.Text = "";
                 }
-
             }
             catch
             {
@@ -72,15 +78,9 @@ namespace WindowsFormsApp5
             }
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void txtpass_TextChanged(object sender, EventArgs e)
         {
-        }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-            Dang_ky form1 = new Dang_ky();
-            form1.Show();
-            this.Hide();
         }
     }
 }

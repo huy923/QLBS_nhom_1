@@ -21,5 +21,26 @@ namespace WindowsFormsApp5
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Mydatabase data = new Mydatabase();
+            if(textBox2.Text != textBox3.Text)
+            {
+                MessageBox.Show("Password confirmation doesn't match Password");
+                textBox2.Text = "";
+                textBox3.Text = "";
+            }
+            data.Insert_user(textBox1.Text, textBox2.Text);
+            this.Hide();
+            Dang_nhap user  = new Dang_nhap();
+            user.Show();
+            
+        }
     }
 }
