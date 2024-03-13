@@ -30,12 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.thêmKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thêmTácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kiểmTraHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = global::WindowsFormsApp5.Properties.Resources.button__2_;
             this.pictureBox5.Location = new System.Drawing.Point(1218, -11);
@@ -46,6 +54,44 @@
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(192, 70);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(894, 541);
+            this.dataGridView1.TabIndex = 8;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thêmKháchHàngToolStripMenuItem,
+            this.thêmTácGiảToolStripMenuItem,
+            this.kiểmTraHóaĐơnToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1256, 24);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // thêmKháchHàngToolStripMenuItem
+            // 
+            this.thêmKháchHàngToolStripMenuItem.Name = "thêmKháchHàngToolStripMenuItem";
+            this.thêmKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
+            this.thêmKháchHàngToolStripMenuItem.Text = "Thêm khách hàng";
+            // 
+            // thêmTácGiảToolStripMenuItem
+            // 
+            this.thêmTácGiảToolStripMenuItem.Name = "thêmTácGiảToolStripMenuItem";
+            this.thêmTácGiảToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.thêmTácGiảToolStripMenuItem.Text = "Thêm tác giả";
+            // 
+            // kiểmTraHóaĐơnToolStripMenuItem
+            // 
+            this.kiểmTraHóaĐơnToolStripMenuItem.Name = "kiểmTraHóaĐơnToolStripMenuItem";
+            this.kiểmTraHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
+            this.kiểmTraHóaĐơnToolStripMenuItem.Text = "Kiểm tra hóa đơn";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -53,20 +99,32 @@
             this.BackgroundImage = global::WindowsFormsApp5.Properties.Resources._1026345;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1256, 729);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form2";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem thêmKháchHàngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thêmTácGiảToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kiểmTraHóaĐơnToolStripMenuItem;
     }
 }

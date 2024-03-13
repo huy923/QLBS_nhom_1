@@ -51,8 +51,11 @@
             this.txtuser.Location = new System.Drawing.Point(114, 368);
             this.txtuser.Margin = new System.Windows.Forms.Padding(8);
             this.txtuser.Name = "txtuser";
+            this.txtuser.PasswordChar = '*';
             this.txtuser.Size = new System.Drawing.Size(232, 34);
             this.txtuser.TabIndex = 2;
+            this.txtuser.UseSystemPasswordChar = true;
+            this.txtuser.WordWrap = false;
             this.txtuser.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtpass

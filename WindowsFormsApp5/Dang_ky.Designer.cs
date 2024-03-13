@@ -99,6 +99,8 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(232, 31);
             this.textBox2.TabIndex = 11;
+            this.textBox2.UseSystemPasswordChar = true;
+            this.textBox2.WordWrap = false;
             // 
             // textBox3
             // 
@@ -109,6 +111,8 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(232, 31);
             this.textBox3.TabIndex = 12;
+            this.textBox3.UseSystemPasswordChar = true;
+            this.textBox3.WordWrap = false;
             // 
             // pictureBox3
             // 
@@ -179,7 +183,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Dang_ky";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
