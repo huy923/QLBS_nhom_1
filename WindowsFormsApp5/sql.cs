@@ -67,5 +67,24 @@ namespace WindowsFormsApp5
                 }
             }
         }
+        public void Update_user(string user, string pass,string newuser, string newpass) { 
+            try
+            {
+                //SqlCommand cmd = new SqlCommand("UPDATE Tai_khoan SET [user] = '@newuser', pass = '@newpass' WHERE [user] = '@user' AND pass = '@pass'",con);
+                SqlCommand cmd = new SqlCommand($"UPDATE Tai_khoan SET [user] = '{newuser}', pass = '{newpass}' WHERE [user] = '{user}' AND pass = '{pass}';",con);
+                //cmd.Parameters.AddWithValue("@newuser", newuser);
+                con.Open();
+                int i =cmd.ExecuteNonQuery();
+                con.Close();
+                if(i != 0)
+                {
+                    MessageBox.Show(i + " user was update");
+                }
+            }
+            catch(SqlException ex) 
+            {
+                MessageBox.Show("Error : ", ex.Message);
+            }
+        }
     }
 }

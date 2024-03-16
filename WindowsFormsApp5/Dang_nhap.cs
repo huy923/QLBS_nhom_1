@@ -61,7 +61,7 @@ namespace WindowsFormsApp5
                 DataTable ta = database.GetData(querry);
                 if (ta.Rows.Count > 0)
                 {
-                    Form2 form2 = new Form2();
+                    Trang_chu form2 = new Trang_chu();
                     form2.Show();
                     this.Hide();
                 }
