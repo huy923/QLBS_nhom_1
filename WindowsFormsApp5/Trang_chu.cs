@@ -39,5 +39,10 @@ namespace WindowsFormsApp5
                 MessageBox.Show("Error : " + ex.Message);
             }
         }
+
+        private void thêmKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

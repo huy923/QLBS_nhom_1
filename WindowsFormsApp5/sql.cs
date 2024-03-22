@@ -37,9 +37,9 @@ namespace WindowsFormsApp5
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("INSERT INTO Tai_khoan ([user], pass) VALUES (@user, @pass)", con);
-                cmd.Parameters.AddWithValue("@user", user);
-                cmd.Parameters.AddWithValue("@pass", pass);
+                SqlCommand cmd = new SqlCommand($"INSERT INTO Tai_khoan ([user], pass) VALUES ('{user}', '{pass}')", con);
+                //cmd.Parameters.AddWithValue("@user", user);
+                //cmd.Parameters.AddWithValue("@pass", pass);
                 con.Open();
                 int i = cmd.ExecuteNonQuery();
                 con.Close();
@@ -67,23 +67,41 @@ namespace WindowsFormsApp5
                 }
             }
         }
-        public void Update_user(string user, string pass,string newuser, string newpass) { 
+        public void Update_user(string user, string pass, string newuser, string newpass)
+        {
             try
             {
                 //SqlCommand cmd = new SqlCommand("UPDATE Tai_khoan SET [user] = '@newuser', pass = '@newpass' WHERE [user] = '@user' AND pass = '@pass'",con);
-                SqlCommand cmd = new SqlCommand($"UPDATE Tai_khoan SET [user] = '{newuser}', pass = '{newpass}' WHERE [user] = '{user}' AND pass = '{pass}';",con);
-                //cmd.Parameters.AddWithValue("@newuser", newuser);
+                SqlCommand cmd = new SqlCommand($"UPDATE Tai_khoan SET [user] = '{newuser}', pass = '{newpass}' WHERE [user] = '{user}' AND pass = '{pass}';", con);
                 con.Open();
-                int i =cmd.ExecuteNonQuery();
+                int i = cmd.ExecuteNonQuery();
                 con.Close();
-                if(i != 0)
+                if (i != 0)
                 {
                     MessageBox.Show(i + " user was update");
                 }
             }
-            catch(SqlException ex) 
+            catch (SqlException ex)
             {
                 MessageBox.Show("Error : ", ex.Message);
+            }
+        }
+        public void Delete_user(string user, string pass)
+        {
+            try
+            {
+                SqlCommand cd = new SqlCommand($"DELETE FROM Tai_khoan WHERE [user] = '{user}' AND pass = '{pass}'", con);
+                con.Open();
+                int i = cd.ExecuteNonQuery();
+                con.Close();
+                if (i != 0)
+                {
+                    MessageBox.Show("User " + user + " was remove");
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error : " + ex.Message);
             }
         }
     }
