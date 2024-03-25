@@ -71,7 +71,6 @@ namespace WindowsFormsApp5
         {
             try
             {
-                //SqlCommand cmd = new SqlCommand("UPDATE Tai_khoan SET [user] = '@newuser', pass = '@newpass' WHERE [user] = '@user' AND pass = '@pass'",con);
                 SqlCommand cmd = new SqlCommand($"UPDATE Tai_khoan SET [user] = '{newuser}', pass = '{newpass}' WHERE [user] = '{user}' AND pass = '{pass}';", con);
                 con.Open();
                 int i = cmd.ExecuteNonQuery();
