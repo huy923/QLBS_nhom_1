@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Xml.Linq;
 namespace WindowsFormsApp5
 {
     public partial class Trang_chu : Form
@@ -27,6 +28,7 @@ namespace WindowsFormsApp5
 
         private void show_dada()
         {
+            QLBSEntities1 qLBSEntities = new QLBSEntities1();
             try
             {
                 Mydatabase data = new Mydatabase();
@@ -41,6 +43,11 @@ namespace WindowsFormsApp5
         }
 
         private void thêmKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

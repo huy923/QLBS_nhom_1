@@ -35,6 +35,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,6 +49,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HoaDon.cs">
+      <DependentUpon>QLBS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLBS.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBS.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLBS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLBS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBS.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Sach.cs">
+      <DependentUpon>QLBS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>QLBS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tac_gia.cs">
+      <DependentUpon>QLBS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tai_khoan.cs">
+      <DependentUpon>QLBS.tt</DependentUpon>
+    </Compile>
     <Compile Include="Them_khach_hang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,10 +142,27 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EntityDeploy Include="QLBS.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLBS.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QLBS.edmx.diagram">
+      <DependentUpon>QLBS.edmx</DependentUpon>
+    </None>
     <None Include="Resources\backgrounds.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1026345.jpg" />
+    <Content Include="QLBS.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLBS.edmx</DependentUpon>
+      <LastGenOutput>QLBS.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="QLBS.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLBS.edmx</DependentUpon>
+      <LastGenOutput>QLBS.cs</LastGenOutput>
+    </Content>
     <Content Include="Resources\avatar.png" />
     <None Include="Resources\avatar1.png" />
     <None Include="Resources\key.png" />
@@ -124,6 +173,9 @@
     <None Include="Resources\logo.ico" />
     <None Include="Resources\sign-up-button.png" />
     <Content Include="Resources\user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
