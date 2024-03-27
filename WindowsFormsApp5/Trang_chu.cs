@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
-using System.Xml.Linq;
 namespace WindowsFormsApp5
 {
     public partial class Trang_chu : Form
     {
+
         public Trang_chu()
         {
             InitializeComponent();
@@ -28,18 +28,18 @@ namespace WindowsFormsApp5
 
         private void show_dada()
         {
-            QLBSEntities1 qLBSEntities = new QLBSEntities1();
-            try
-            {
-                Mydatabase data = new Mydatabase();
-                string cmd = $"SELECT * FROM Tai_khoan";
-                DataTable dt = data.GetData(cmd);
-                dataGridView1.DataSource = dt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error : " + ex.Message);
-            }
+           
+            //try
+            //{
+            //    Mydatabase data = new Mydatabase();
+            //    string cmd = $"SELECT * FROM Tai_khoan";
+            //    DataTable dt = data.GetData(cmd);
+            //    dataGridView1.DataSource = dt;
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error : " + ex.Message);
+            //}
         }
 
         private void thêmKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)

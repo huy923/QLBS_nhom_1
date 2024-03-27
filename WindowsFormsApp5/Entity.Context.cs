@@ -13,10 +13,10 @@ namespace WindowsFormsApp5
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QLBSEntities1 : DbContext
+    public partial class QLBS : DbContext
     {
-        public QLBSEntities1()
-            : base("name=QLBSEntities1")
+        public QLBS()
+            : base("name=QLBS")
         {
         }
     

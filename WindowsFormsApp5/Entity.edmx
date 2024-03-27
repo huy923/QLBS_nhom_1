@@ -143,7 +143,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="QLBSEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="QLBS" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
           <EntitySet Name="Saches" EntityType="Self.Sach" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
@@ -159,7 +159,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QLBSModelStoreContainer" CdmEntityContainer="QLBSEntities1">
+        <EntityContainerMapping StorageEntityContainer="QLBSModelStoreContainer" CdmEntityContainer="QLBS">
           <EntitySetMapping Name="HoaDons">
             <EntityTypeMapping TypeName="QLBSModel.HoaDon">
               <MappingFragment StoreEntitySet="HoaDon">
