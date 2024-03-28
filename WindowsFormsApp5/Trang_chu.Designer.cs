@@ -33,10 +33,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Trang_chu));
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.thêmKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmTácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kiểmTraHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -81,18 +81,6 @@
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thêmKháchHàngToolStripMenuItem,
-            this.thêmTácGiảToolStripMenuItem,
-            this.kiểmTraHóaĐơnToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1256, 24);
-            this.menuStrip1.TabIndex = 9;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
             // thêmKháchHàngToolStripMenuItem
             // 
             this.thêmKháchHàngToolStripMenuItem.Name = "thêmKháchHàngToolStripMenuItem";
@@ -111,6 +99,18 @@
             this.kiểmTraHóaĐơnToolStripMenuItem.Name = "kiểmTraHóaĐơnToolStripMenuItem";
             this.kiểmTraHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
             this.kiểmTraHóaĐơnToolStripMenuItem.Text = "Kiểm tra hóa đơn";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thêmKháchHàngToolStripMenuItem,
+            this.thêmTácGiảToolStripMenuItem,
+            this.kiểmTraHóaĐơnToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1256, 24);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
             // 
             // Trang_chu
             // 
@@ -142,9 +142,9 @@
 
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem thêmKháchHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thêmTácGiảToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kiểmTraHóaĐơnToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }

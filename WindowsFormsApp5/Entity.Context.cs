@@ -15,8 +15,7 @@ namespace WindowsFormsApp5
     
     public partial class QLBS : DbContext
     {
-        public QLBS()
-            : base("name=QLBS")
+        public QLBS() : base("name=QLBS")
         {
         }
     

@@ -15,9 +15,9 @@ namespace WindowsFormsApp5
         QLBS db = new QLBS();
         void nap()
         {
-            comboBox1.DataSource = db.Tai_khoan.ToList();
-            comboBox1.ValueMember = "user";
-            comboBox1.DisplayMember = "pass";
+            //comboBox1.DataSource = db.Tai_khoan.ToList();
+            //comboBox1.ValueMember = "user";
+            //comboBox1.DisplayMember = "pass";
         }
         public Them_khach_hang()
         {
