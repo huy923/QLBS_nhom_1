@@ -38,8 +38,6 @@ namespace WindowsFormsApp5
             try
             {
                 SqlCommand cmd = new SqlCommand($"INSERT INTO Tai_khoan ([user], pass) VALUES ('{user}', '{pass}')", con);
-                //cmd.Parameters.AddWithValue("@user", user);
-                //cmd.Parameters.AddWithValue("@pass", pass);
                 con.Open();
                 int i = cmd.ExecuteNonQuery();
                 con.Close();

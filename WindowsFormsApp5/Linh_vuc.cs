@@ -12,20 +12,17 @@ namespace WindowsFormsApp5
     using System;
     using System.Collections.Generic;
     
-    public partial class HoaDon
+    public partial class Linh_vuc
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public HoaDon()
+        public Linh_vuc()
         {
-            this.Chi_tiet_hao_don = new HashSet<Chi_tiet_hao_don>();
+            this.Saches = new HashSet<Sach>();
         }
     
-        public string MaHoaDon { get; set; }
-        public Nullable<System.DateTime> Ngay_ban { get; set; }
-        public string Ten_khach_hang { get; set; }
-        public Nullable<int> Tong_tien { get; set; }
+        public string Linh_Vuc1 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Chi_tiet_hao_don> Chi_tiet_hao_don { get; set; }
+        public virtual ICollection<Sach> Saches { get; set; }
     }
 }

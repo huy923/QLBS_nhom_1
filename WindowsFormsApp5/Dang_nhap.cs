@@ -13,6 +13,7 @@ namespace WindowsFormsApp5
 {
     public partial class Dang_nhap : Form
     {
+
         public Dang_nhap()
         {
             InitializeComponent();

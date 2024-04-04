@@ -19,37 +19,29 @@ namespace WindowsFormsApp5
         }
         private void Form2_Load(object sender, EventArgs e)
         {
-            show_dada();
         }
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void show_dada()
-        {
-           
-            //try
-            //{
-            //    Mydatabase data = new Mydatabase();
-            //    string cmd = $"SELECT * FROM Tai_khoan";
-            //    DataTable dt = data.GetData(cmd);
-            //    dataGridView1.DataSource = dt;
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error : " + ex.Message);
-            //}
-        }
-
         private void thêmKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Them_khach_hang newkhach_hang = new Them_khach_hang();
+            newkhach_hang.Show();
+            this.Hide();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void sửaTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sua_tac_gia tacgia = new Sua_tac_gia();
+            tacgia.Show();
+            this.Hide();
         }
     }
 }

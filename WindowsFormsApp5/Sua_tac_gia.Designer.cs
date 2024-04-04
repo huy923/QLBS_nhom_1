@@ -136,9 +136,10 @@
             // 
             // them
             // 
+            this.them.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             resources.ApplyResources(this.them, "them");
             this.them.Name = "them";
-            this.them.UseVisualStyleBackColor = true;
+            this.them.UseVisualStyleBackColor = false;
             this.them.Click += new System.EventHandler(this.them_Click);
             // 
             // nam_sinh
@@ -169,16 +170,18 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             resources.ApplyResources(this.button2, "button2");
             this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1

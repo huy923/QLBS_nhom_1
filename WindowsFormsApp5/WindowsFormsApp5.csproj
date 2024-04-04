@@ -63,6 +63,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chi_tiet_hao_don.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -81,10 +84,27 @@
     <Compile Include="HoaDon.cs">
       <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
+    <Compile Include="Kho.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Linh_vuc.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Loai_sach.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Nha_xuat_ban.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
     <Compile Include="QLBSDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLBSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBS_hoa_don.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBS_hoa_don.xsd</DependentUpon>
     </Compile>
     <Compile Include="Sach.cs">
       <DependentUpon>Entity.tt</DependentUpon>
@@ -191,6 +211,17 @@
     </None>
     <None Include="QLBSDataSet.xss">
       <DependentUpon>QLBSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLBS_hoa_don.xsc">
+      <DependentUpon>QLBS_hoa_don.xsd</DependentUpon>
+    </None>
+    <None Include="QLBS_hoa_don.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBS_hoa_don.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBS_hoa_don.xss">
+      <DependentUpon>QLBS_hoa_don.xsd</DependentUpon>
     </None>
     <None Include="Resources\backgrounds.png" />
   </ItemGroup>

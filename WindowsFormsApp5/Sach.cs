@@ -14,6 +14,12 @@ namespace WindowsFormsApp5
     
     public partial class Sach
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Sach()
+        {
+            this.Chi_tiet_hao_don = new HashSet<Chi_tiet_hao_don>();
+        }
+    
         public string MaSach { get; set; }
         public string Ten_sach { get; set; }
         public string MaTG { get; set; }
@@ -23,7 +29,14 @@ namespace WindowsFormsApp5
         public Nullable<int> Lan_tai_ban { get; set; }
         public string Ten_nha_xuat_ban { get; set; }
         public Nullable<System.DateTime> Nam_xuat_ban { get; set; }
+        public string Loai_sach { get; set; }
     
         public virtual Tac_gia Tac_gia { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Chi_tiet_hao_don> Chi_tiet_hao_don { get; set; }
+        public virtual Linh_vuc Linh_vuc1 { get; set; }
+        public virtual Loai_sach Loai_sach1 { get; set; }
+        public virtual Nha_xuat_ban Nha_xuat_ban { get; set; }
+        public virtual Kho Kho { get; set; }
     }
 }
