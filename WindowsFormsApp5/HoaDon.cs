@@ -18,6 +18,7 @@ namespace WindowsFormsApp5
         public HoaDon()
         {
             this.Chi_tiet_hao_don = new HashSet<Chi_tiet_hao_don>();
+            this.Chi_tiet_hoa_don = new HashSet<Chi_tiet_hoa_don>();
         }
     
         public string MaHoaDon { get; set; }
@@ -27,5 +28,7 @@ namespace WindowsFormsApp5
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Chi_tiet_hao_don> Chi_tiet_hao_don { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Chi_tiet_hoa_don> Chi_tiet_hoa_don { get; set; }
     }
 }

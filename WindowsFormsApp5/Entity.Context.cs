@@ -35,5 +35,6 @@ namespace WindowsFormsApp5
         public virtual DbSet<Loai_sach> Loai_sach { get; set; }
         public virtual DbSet<Nha_xuat_ban> Nha_xuat_ban { get; set; }
         public virtual DbSet<Kho> Khoes { get; set; }
+        public virtual DbSet<Chi_tiet_hoa_don> Chi_tiet_hoa_don { get; set; }
     }
 }

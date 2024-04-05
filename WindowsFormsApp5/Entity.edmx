@@ -5,7 +5,7 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="QLBSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Chi_tiet_hao_don">
+        <EntityType Name="Chi_tiet_hoa_don">
           <Key>
             <PropertyRef Name="Ma_hoa_don" />
             <PropertyRef Name="MaSach" />
@@ -94,24 +94,24 @@
         </EntityType>
         <Association Name="FK_Chi_tiet_hao_don_HoaDon">
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
-          <End Role="Chi_tiet_hao_don" Type="Self.Chi_tiet_hao_don" Multiplicity="*" />
+          <End Role="Chi_tiet_hoa_don" Type="Self.Chi_tiet_hoa_don" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HoaDon">
               <PropertyRef Name="MaHoaDon" />
             </Principal>
-            <Dependent Role="Chi_tiet_hao_don">
+            <Dependent Role="Chi_tiet_hoa_don">
               <PropertyRef Name="Ma_hoa_don" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Chi_tiet_hao_don_Sach">
           <End Role="Sach" Type="Self.Sach" Multiplicity="1" />
-          <End Role="Chi_tiet_hao_don" Type="Self.Chi_tiet_hao_don" Multiplicity="*" />
+          <End Role="Chi_tiet_hoa_don" Type="Self.Chi_tiet_hoa_don" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Sach">
               <PropertyRef Name="MaSach" />
             </Principal>
-            <Dependent Role="Chi_tiet_hao_don">
+            <Dependent Role="Chi_tiet_hoa_don">
               <PropertyRef Name="MaSach" />
             </Dependent>
           </ReferentialConstraint>
@@ -177,7 +177,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="QLBSModelStoreContainer">
-          <EntitySet Name="Chi_tiet_hao_don" EntityType="Self.Chi_tiet_hao_don" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Chi_tiet_hoa_don" EntityType="Self.Chi_tiet_hoa_don" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Kho" EntityType="Self.Kho" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Linh_vuc" EntityType="Self.Linh_vuc" Schema="dbo" store:Type="Tables" />
@@ -189,11 +189,11 @@
           <EntitySet Name="Tai_khoan" EntityType="Self.Tai_khoan" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Chi_tiet_hao_don_HoaDon" Association="Self.FK_Chi_tiet_hao_don_HoaDon">
             <End Role="HoaDon" EntitySet="HoaDon" />
-            <End Role="Chi_tiet_hao_don" EntitySet="Chi_tiet_hao_don" />
+            <End Role="Chi_tiet_hoa_don" EntitySet="Chi_tiet_hoa_don" />
           </AssociationSet>
           <AssociationSet Name="FK_Chi_tiet_hao_don_Sach" Association="Self.FK_Chi_tiet_hao_don_Sach">
             <End Role="Sach" EntitySet="Sach" />
-            <End Role="Chi_tiet_hao_don" EntitySet="Chi_tiet_hao_don" />
+            <End Role="Chi_tiet_hoa_don" EntitySet="Chi_tiet_hoa_don" />
           </AssociationSet>
           <AssociationSet Name="FK_Kho_Sach" Association="Self.FK_Kho_Sach">
             <End Role="Sach" EntitySet="Sach" />
@@ -229,6 +229,7 @@
           <Property Name="Ten_khach_hang" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Tong_tien" Type="Int32" />
           <NavigationProperty Name="Chi_tiet_hao_don" Relationship="QLBSModel.FK_Chi_tiet_hao_don_HoaDon" FromRole="HoaDon" ToRole="Chi_tiet_hao_don" />
+          <NavigationProperty Name="Chi_tiet_hoa_don" Relationship="QLBSModel.FK_Chi_tiet_hao_don_HoaDon1" FromRole="HoaDon" ToRole="Chi_tiet_hoa_don" />
         </EntityType>
         <EntityType Name="Sach">
           <Key>
@@ -250,6 +251,7 @@
           <NavigationProperty Name="Loai_sach1" Relationship="QLBSModel.FK_Sach_Loai_sach" FromRole="Sach" ToRole="Loai_sach" />
           <NavigationProperty Name="Nha_xuat_ban" Relationship="QLBSModel.FK_Sach_Nha_xuat_ban" FromRole="Sach" ToRole="Nha_xuat_ban" />
           <NavigationProperty Name="Kho" Relationship="QLBSModel.FK_Kho_Sach" FromRole="Sach" ToRole="Kho" />
+          <NavigationProperty Name="Chi_tiet_hoa_don" Relationship="QLBSModel.FK_Chi_tiet_hao_don_Sach1" FromRole="Sach" ToRole="Chi_tiet_hoa_don" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -329,6 +331,15 @@
           <AssociationSet Name="FK_Kho_Sach" Association="QLBSModel.FK_Kho_Sach">
             <End Role="Sach" EntitySet="Saches" />
             <End Role="Kho" EntitySet="Khoes" />
+          </AssociationSet>
+          <EntitySet Name="Chi_tiet_hoa_don" EntityType="QLBSModel.Chi_tiet_hoa_don" />
+          <AssociationSet Name="FK_Chi_tiet_hao_don_HoaDon1" Association="QLBSModel.FK_Chi_tiet_hao_don_HoaDon1">
+            <End Role="HoaDon" EntitySet="HoaDons" />
+            <End Role="Chi_tiet_hoa_don" EntitySet="Chi_tiet_hoa_don" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Chi_tiet_hao_don_Sach1" Association="QLBSModel.FK_Chi_tiet_hao_don_Sach1">
+            <End Role="Sach" EntitySet="Saches" />
+            <End Role="Chi_tiet_hoa_don" EntitySet="Chi_tiet_hoa_don" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Chi_tiet_hao_don">
@@ -445,6 +456,43 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Chi_tiet_hoa_don">
+          <Key>
+            <PropertyRef Name="Ma_hoa_don" />
+            <PropertyRef Name="MaSach" />
+          </Key>
+          <Property Name="Ma_hoa_don" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="MaSach" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="So_luong" Type="Int32" />
+          <Property Name="Gia_tien" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Thanh_tien" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="HoaDon" Relationship="QLBSModel.FK_Chi_tiet_hao_don_HoaDon1" FromRole="Chi_tiet_hoa_don" ToRole="HoaDon" />
+          <NavigationProperty Name="Sach" Relationship="QLBSModel.FK_Chi_tiet_hao_don_Sach1" FromRole="Chi_tiet_hoa_don" ToRole="Sach" />
+        </EntityType>
+        <Association Name="FK_Chi_tiet_hao_don_HoaDon1">
+          <End Type="QLBSModel.HoaDon" Role="HoaDon" Multiplicity="1" />
+          <End Type="QLBSModel.Chi_tiet_hoa_don" Role="Chi_tiet_hoa_don" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoaDon">
+              <PropertyRef Name="MaHoaDon" />
+            </Principal>
+            <Dependent Role="Chi_tiet_hoa_don">
+              <PropertyRef Name="Ma_hoa_don" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Chi_tiet_hao_don_Sach1">
+          <End Type="QLBSModel.Sach" Role="Sach" Multiplicity="1" />
+          <End Type="QLBSModel.Chi_tiet_hoa_don" Role="Chi_tiet_hoa_don" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sach">
+              <PropertyRef Name="MaSach" />
+            </Principal>
+            <Dependent Role="Chi_tiet_hoa_don">
+              <PropertyRef Name="MaSach" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -507,17 +555,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Chi_tiet_hao_don">
-            <EntityTypeMapping TypeName="QLBSModel.Chi_tiet_hao_don">
-              <MappingFragment StoreEntitySet="Chi_tiet_hao_don">
-                <ScalarProperty Name="Thanh_tien" ColumnName="Thanh_tien" />
-                <ScalarProperty Name="Gia_tien" ColumnName="Gia_tien" />
-                <ScalarProperty Name="So_luong" ColumnName="So_luong" />
-                <ScalarProperty Name="MaSach" ColumnName="MaSach" />
-                <ScalarProperty Name="Ma_hoa_don" ColumnName="Ma_hoa_don" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Linh_vuc">
             <EntityTypeMapping TypeName="QLBSModel.Linh_vuc">
               <MappingFragment StoreEntitySet="Linh_vuc">
@@ -544,6 +581,17 @@
               <MappingFragment StoreEntitySet="Kho">
                 <ScalarProperty Name="So_luong" ColumnName="So_luong" />
                 <ScalarProperty Name="MaSach" ColumnName="MaSach" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Chi_tiet_hoa_don">
+            <EntityTypeMapping TypeName="QLBSModel.Chi_tiet_hoa_don">
+              <MappingFragment StoreEntitySet="Chi_tiet_hoa_don">
+                <ScalarProperty Name="Thanh_tien" ColumnName="Thanh_tien" />
+                <ScalarProperty Name="Gia_tien" ColumnName="Gia_tien" />
+                <ScalarProperty Name="So_luong" ColumnName="So_luong" />
+                <ScalarProperty Name="MaSach" ColumnName="MaSach" />
+                <ScalarProperty Name="Ma_hoa_don" ColumnName="Ma_hoa_don" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

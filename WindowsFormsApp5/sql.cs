@@ -37,7 +37,7 @@ namespace WindowsFormsApp5
         {
             try
             {
-                SqlCommand cmd = new SqlCommand($"INSERT INTO Tai_khoan ([user], pass) VALUES ('{user}', '{pass}')", con);
+                SqlCommand cmd = new SqlCommand($"INSERT INTO TAI_KHOAN ([USER], PASS) VALUES ('{user}', '{pass}')", con);
                 con.Open();
                 int i = cmd.ExecuteNonQuery();
                 con.Close();
@@ -69,7 +69,7 @@ namespace WindowsFormsApp5
         {
             try
             {
-                SqlCommand cmd = new SqlCommand($"UPDATE Tai_khoan SET [user] = '{newuser}', pass = '{newpass}' WHERE [user] = '{user}' AND pass = '{pass}';", con);
+                SqlCommand cmd = new SqlCommand($"UPDATE TAI_KHOAN SET [USER] = '{newuser}', pass = '{newpass}' WHERE [USER] = '{user}' AND PASS = '{pass}';", con);
                 con.Open();
                 int i = cmd.ExecuteNonQuery();
                 con.Close();
@@ -87,7 +87,7 @@ namespace WindowsFormsApp5
         {
             try
             {
-                SqlCommand cd = new SqlCommand($"DELETE FROM Tai_khoan WHERE [user] = '{user}' AND pass = '{pass}'", con);
+                SqlCommand cd = new SqlCommand($"DELETE FROM TAI_KHOAN WHERE [USER] = '{user}' AND PASS = '{pass}'", con);
                 con.Open();
                 int i = cd.ExecuteNonQuery();
                 con.Close();
@@ -95,6 +95,34 @@ namespace WindowsFormsApp5
                 {
                     MessageBox.Show("User " + user + " was remove");
                 }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error : " + ex.Message);
+            }
+        }
+        public void Insert_linh_vuc(string linh) {
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"INSERT INTO LINH_VUC (LINH_VUC) VALUES ('{linh}')", con);
+                con.Open();
+                int i = cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch(SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void Delete_linh_vuc(string data)
+        {
+            try
+            {
+                SqlCommand cd = new SqlCommand($"DELETE FROM LINH_VUC WHERE [LINH_VUC] = '{data}'", con);
+                con.Open();
+                int i = cd.ExecuteNonQuery();
+                con.Close();
+   
             }
             catch (SqlException ex)
             {

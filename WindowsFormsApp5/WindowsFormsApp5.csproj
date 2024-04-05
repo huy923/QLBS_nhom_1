@@ -66,6 +66,9 @@
     <Compile Include="Chi_tiet_hao_don.cs">
       <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
+    <Compile Include="Chi_tiet_hoa_don.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -86,6 +89,12 @@
     </Compile>
     <Compile Include="Kho.cs">
       <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="linhvuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="linhvuc.Designer.cs">
+      <DependentUpon>linhvuc.cs</DependentUpon>
     </Compile>
     <Compile Include="Linh_vuc.cs">
       <DependentUpon>Entity.tt</DependentUpon>
@@ -161,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dang_ky.resx">
       <DependentUpon>Dang_ky.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="linhvuc.resx">
+      <DependentUpon>linhvuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sua_tac_gia.aa.resx">
       <DependentUpon>Sua_tac_gia.cs</DependentUpon>
