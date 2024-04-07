@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.thêmKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmTácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,6 +45,10 @@
             this.fKChitiethaodonHoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLBShoadonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.MaHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ten_khach_hang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ngay_ban = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tong_tien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLBS_hoa_don)).BeginInit();
@@ -123,8 +128,17 @@
             // 
             this.hienthihoadon.AllowUserToAddRows = false;
             this.hienthihoadon.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hienthihoadon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.hienthihoadon.BackgroundColor = System.Drawing.Color.White;
+            this.hienthihoadon.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.hienthihoadon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.hienthihoadon.Location = new System.Drawing.Point(12, 368);
+            this.hienthihoadon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaHoaDon,
+            this.Ten_khach_hang,
+            this.Ngay_ban,
+            this.Tong_tien});
+            this.hienthihoadon.Location = new System.Drawing.Point(9, 36);
             this.hienthihoadon.Name = "hienthihoadon";
             this.hienthihoadon.ReadOnly = true;
             this.hienthihoadon.Size = new System.Drawing.Size(1203, 276);
@@ -152,16 +166,44 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(416, 98);
+            this.listBox1.Location = new System.Drawing.Point(365, 566);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(93, 17);
             this.listBox1.TabIndex = 14;
+            // 
+            // MaHoaDon
+            // 
+            this.MaHoaDon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaHoaDon.HeaderText = "Mã Hóa Đơn";
+            this.MaHoaDon.Name = "MaHoaDon";
+            this.MaHoaDon.ReadOnly = true;
+            // 
+            // Ten_khach_hang
+            // 
+            this.Ten_khach_hang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Ten_khach_hang.HeaderText = "Tên Khách Hàng";
+            this.Ten_khach_hang.Name = "Ten_khach_hang";
+            this.Ten_khach_hang.ReadOnly = true;
+            // 
+            // Ngay_ban
+            // 
+            this.Ngay_ban.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Ngay_ban.HeaderText = "Ngày Bán";
+            this.Ngay_ban.Name = "Ngay_ban";
+            this.Ngay_ban.ReadOnly = true;
+            // 
+            // Tong_tien
+            // 
+            this.Tong_tien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Tong_tien.HeaderText = "Tổng Tiền";
+            this.Tong_tien.Name = "Tong_tien";
+            this.Tong_tien.ReadOnly = true;
             // 
             // Them_khach_hang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::WindowsFormsApp5.Properties.Resources._1026345;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1256, 729);
             this.Controls.Add(this.listBox1);
@@ -203,5 +245,9 @@
         private System.Windows.Forms.BindingSource fKChitiethaodonHoaDonBindingSource;
         private System.Windows.Forms.BindingSource qLBShoadonBindingSource;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaHoaDon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ten_khach_hang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ngay_ban;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tong_tien;
     }
 }

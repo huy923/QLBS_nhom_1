@@ -26,7 +26,7 @@ namespace WindowsFormsApp5
             string cmd = $"SELECT * FROM LINH_VUC";
             Mydatabase newdata = new Mydatabase();
             dataGridView1.DataSource = newdata.GetData(cmd);
-
+            dataGridView1.Columns["Linh_vuc"].HeaderText = "Tên Lĩnh Vực";
         }
         private void linhvuc_Load(object sender, EventArgs e)
         {
@@ -36,15 +36,19 @@ namespace WindowsFormsApp5
         private void button2_Click(object sender, EventArgs e)
         {
             Mydatabase mydatabase = new Mydatabase();
-            mydatabase.Delete_linh_vuc(textBox2.Text);
+            string cmd = $"DELETE FROM LINH_VUC WHERE [LINH_VUC] = '{textBox2.Text}'";
+            mydatabase.command(cmd);
             nap();
+            textBox2.Text = "";  
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Mydatabase newdata = new Mydatabase();
-            newdata.Insert_linh_vuc(textBox1.Text);
+            string cmd = $"INSERT INTO LINH_VUC (LINH_VUC) VALUES ('{textBox1.Text}')";
+            newdata.command(cmd);
             nap();
+            textBox1.Text = "";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -54,7 +58,17 @@ namespace WindowsFormsApp5
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
                 string selectedValue = row.Cells[0].Value.ToString(); 
                 textBox2.Text = selectedValue;
+
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Mydatabase newdata = new Mydatabase();
+            string cmd = $"UPDATE LINH_VUC SET LINH_VUC = '{textBox2.Text}' WHERE LINH_VUC = '{textBox2.Text}'";
+            newdata.command(cmd);
+            nap();
+            textBox2.Text = "";
         }
     }
 }

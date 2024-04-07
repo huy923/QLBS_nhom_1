@@ -38,7 +38,7 @@ namespace WindowsFormsApp5
             }
             data.Insert_user(textBox1.Text, textBox2.Text);
             this.Hide();
-            Dang_nhap user  = new Dang_nhap();
+            Dang_nhap user = new Dang_nhap();
             user.Show();
             
         }

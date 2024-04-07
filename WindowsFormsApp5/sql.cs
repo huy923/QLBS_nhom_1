@@ -41,10 +41,7 @@ namespace WindowsFormsApp5
                 con.Open();
                 int i = cmd.ExecuteNonQuery();
                 con.Close();
-                if (i != 0)
-                {
-                    MessageBox.Show(i + "Data Saved");
-                }
+                
             }
             catch (SqlException ex)
             {
@@ -65,46 +62,10 @@ namespace WindowsFormsApp5
                 }
             }
         }
-        public void Update_user(string user, string pass, string newuser, string newpass)
-        {
+        public void command(string CMD) {
             try
             {
-                SqlCommand cmd = new SqlCommand($"UPDATE TAI_KHOAN SET [USER] = '{newuser}', pass = '{newpass}' WHERE [USER] = '{user}' AND PASS = '{pass}';", con);
-                con.Open();
-                int i = cmd.ExecuteNonQuery();
-                con.Close();
-                if (i != 0)
-                {
-                    MessageBox.Show(i + " user was update");
-                }
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Error : ", ex.Message);
-            }
-        }
-        public void Delete_user(string user, string pass)
-        {
-            try
-            {
-                SqlCommand cd = new SqlCommand($"DELETE FROM TAI_KHOAN WHERE [USER] = '{user}' AND PASS = '{pass}'", con);
-                con.Open();
-                int i = cd.ExecuteNonQuery();
-                con.Close();
-                if (i != 0)
-                {
-                    MessageBox.Show("User " + user + " was remove");
-                }
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Error : " + ex.Message);
-            }
-        }
-        public void Insert_linh_vuc(string linh) {
-            try
-            {
-                SqlCommand cmd = new SqlCommand($"INSERT INTO LINH_VUC (LINH_VUC) VALUES ('{linh}')", con);
+                SqlCommand cmd = new SqlCommand(CMD, con);
                 con.Open();
                 int i = cmd.ExecuteNonQuery();
                 con.Close();
@@ -112,21 +73,6 @@ namespace WindowsFormsApp5
             catch(SqlException ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-        }
-        public void Delete_linh_vuc(string data)
-        {
-            try
-            {
-                SqlCommand cd = new SqlCommand($"DELETE FROM LINH_VUC WHERE [LINH_VUC] = '{data}'", con);
-                con.Open();
-                int i = cd.ExecuteNonQuery();
-                con.Close();
-   
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Error : " + ex.Message);
             }
         }
     }

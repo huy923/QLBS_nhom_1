@@ -63,47 +63,63 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chi_tiet_hao_don.cs">
-      <DependentUpon>Entity.tt</DependentUpon>
-    </Compile>
     <Compile Include="Chi_tiet_hoa_don.cs">
-      <DependentUpon>Entity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entity.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Entity.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entity.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Entity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entity.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Entity.edmx</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="HoaDon.cs">
-      <DependentUpon>Entity.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Kho.cs">
-      <DependentUpon>Entity.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Linh_vuc.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Loai_sach.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Nha_xuat_ban.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sach.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tac_gia.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tai_khoan.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="the_loai_sach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>the_loai_sach.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="linhvuc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="linhvuc.Designer.cs">
       <DependentUpon>linhvuc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Linh_vuc.cs">
-      <DependentUpon>Entity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Loai_sach.cs">
-      <DependentUpon>Entity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Nha_xuat_ban.cs">
-      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="QLBSDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -114,18 +130,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLBS_hoa_don.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Sach.cs">
-      <DependentUpon>Entity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>Entity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Tac_gia.cs">
-      <DependentUpon>Entity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Tai_khoan.cs">
-      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="Them_khach_hang.cs">
       <SubType>Form</SubType>
@@ -183,6 +187,9 @@
     <EmbeddedResource Include="Sua_tac_gia.resx">
       <DependentUpon>Sua_tac_gia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="the_loai_sach.resx">
+      <DependentUpon>the_loai_sach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Trang_chu.resx">
       <DependentUpon>Trang_chu.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,12 +198,12 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Entity.edmx">
+    <EntityDeploy Include="Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Entity.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Entity.edmx.diagram">
-      <DependentUpon>Entity.edmx</DependentUpon>
+    <None Include="Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -238,16 +245,15 @@
     <None Include="Resources\backgrounds.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1026345.jpg" />
-    <Content Include="Entity.Context.tt">
+    <Content Include="Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Entity.edmx</DependentUpon>
-      <LastGenOutput>Entity.Context.cs</LastGenOutput>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Entity.tt">
+    <Content Include="Model.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Entity.edmx</DependentUpon>
-      <LastGenOutput>Entity.cs</LastGenOutput>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
     <Content Include="Resources\avatar.png" />
     <None Include="Resources\avatar1.png" />
