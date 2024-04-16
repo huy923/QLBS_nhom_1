@@ -160,6 +160,7 @@
     </Compile>
     <Compile Include="Them_khach_hang.Designer.cs">
       <DependentUpon>Them_khach_hang.cs</DependentUpon>
+		
 =======
     <Compile Include="Sua_tac_gia.cs">
       <SubType>Form</SubType>
