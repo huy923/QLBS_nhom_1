@@ -32,11 +32,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Trang_chu));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.thêmKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmTácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kiểmTraHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+<<<<<<< HEAD
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+=======
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.sửaTácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.linhVựcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+>>>>>>> huy
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -55,7 +61,11 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+<<<<<<< HEAD
             this.dataGridView1.Location = new System.Drawing.Point(-26, 45);
+=======
+            this.dataGridView1.Location = new System.Drawing.Point(0, 24);
+>>>>>>> huy
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
@@ -63,6 +73,7 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+<<<<<<< HEAD
             this.dataGridView1.Size = new System.Drawing.Size(1282, 541);
             this.dataGridView1.TabIndex = 1;
             // 
@@ -77,6 +88,11 @@
             this.menuStrip1.Size = new System.Drawing.Size(1256, 24);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
+=======
+            this.dataGridView1.Size = new System.Drawing.Size(1256, 422);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+>>>>>>> huy
             // 
             // thêmKháchHàngToolStripMenuItem
             // 
@@ -97,6 +113,7 @@
             this.kiểmTraHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
             this.kiểmTraHóaĐơnToolStripMenuItem.Text = "Kiểm tra hóa đơn";
             // 
+<<<<<<< HEAD
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
@@ -108,12 +125,41 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 10;
             this.pictureBox5.TabStop = false;
+=======
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thêmKháchHàngToolStripMenuItem,
+            this.thêmTácGiảToolStripMenuItem,
+            this.kiểmTraHóaĐơnToolStripMenuItem,
+            this.sửaTácGiảToolStripMenuItem,
+            this.linhVựcToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1256, 24);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // sửaTácGiảToolStripMenuItem
+            // 
+            this.sửaTácGiảToolStripMenuItem.Name = "sửaTácGiảToolStripMenuItem";
+            this.sửaTácGiảToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.sửaTácGiảToolStripMenuItem.Text = "Sửa tác giả";
+            this.sửaTácGiảToolStripMenuItem.Click += new System.EventHandler(this.sửaTácGiảToolStripMenuItem_Click);
+            // 
+            // linhVựcToolStripMenuItem
+            // 
+            this.linhVựcToolStripMenuItem.Name = "linhVựcToolStripMenuItem";
+            this.linhVựcToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.linhVựcToolStripMenuItem.Text = "Lĩnh vực";
+            this.linhVựcToolStripMenuItem.Click += new System.EventHandler(this.linhVựcToolStripMenuItem_Click);
+>>>>>>> huy
             // 
             // Trang_chu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::WindowsFormsApp5.Properties.Resources._1026345;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1256, 729);
             this.Controls.Add(this.pictureBox5);
@@ -137,10 +183,15 @@
 
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem thêmKháchHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thêmTácGiảToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kiểmTraHóaĐơnToolStripMenuItem;
+<<<<<<< HEAD
         private System.Windows.Forms.PictureBox pictureBox5;
+=======
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem sửaTácGiảToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem linhVựcToolStripMenuItem;
+>>>>>>> huy
     }
 }

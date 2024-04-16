@@ -37,14 +37,15 @@ namespace WindowsFormsApp5
         {
             try
             {
+<<<<<<< HEAD
                 SqlCommand cmd = new SqlCommand($"INSERT INTO Tai_khoan ([user], pass) VALUES ('{user}', '{pass}')", con);
+=======
+                SqlCommand cmd = new SqlCommand($"INSERT INTO TAI_KHOAN ([USER], PASS) VALUES ('{user}', '{pass}')", con);
+>>>>>>> huy
                 con.Open();
                 int i = cmd.ExecuteNonQuery();
                 con.Close();
-                if (i != 0)
-                {
-                    MessageBox.Show(i + "Data Saved");
-                }
+                
             }
             catch (SqlException ex)
             {
@@ -65,40 +66,21 @@ namespace WindowsFormsApp5
                 }
             }
         }
-        public void Update_user(string user, string pass, string newuser, string newpass)
-        {
+        public void command(string CMD) {
             try
             {
+<<<<<<< HEAD
                 SqlCommand cmd = new SqlCommand($"UPDATE Tai_khoan SET [user] = '{newuser}', pass = '{newpass}' WHERE [user] = '{user}' AND pass = '{pass}';", con);
+=======
+                SqlCommand cmd = new SqlCommand(CMD, con);
+>>>>>>> huy
                 con.Open();
                 int i = cmd.ExecuteNonQuery();
                 con.Close();
-                if (i != 0)
-                {
-                    MessageBox.Show(i + " user was update");
-                }
             }
-            catch (SqlException ex)
+            catch(SqlException ex)
             {
-                MessageBox.Show("Error : ", ex.Message);
-            }
-        }
-        public void Delete_user(string user, string pass)
-        {
-            try
-            {
-                SqlCommand cd = new SqlCommand($"DELETE FROM Tai_khoan WHERE [user] = '{user}' AND pass = '{pass}'", con);
-                con.Open();
-                int i = cd.ExecuteNonQuery();
-                con.Close();
-                if (i != 0)
-                {
-                    MessageBox.Show("User " + user + " was remove");
-                }
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Error : " + ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +36,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.XMLSrc, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,6 +63,80 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chi_tiet_hoa_don.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kho.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Linh_vuc.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Loai_sach.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Nha_xuat_ban.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sach.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tac_gia.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tai_khoan.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="the_loai_sach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>the_loai_sach.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="linhvuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="linhvuc.Designer.cs">
+      <DependentUpon>linhvuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLBSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBS_hoa_don.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBS_hoa_don.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Them_khach_hang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Them_khach_hang.Designer.cs">
+      <DependentUpon>Them_khach_hang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dang_ky.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,11 +154,19 @@
     <Compile Include="Dang_nhap.Designer.cs">
       <DependentUpon>Dang_nhap.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Them_khach_hang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Them_khach_hang.Designer.cs">
       <DependentUpon>Them_khach_hang.cs</DependentUpon>
+=======
+    <Compile Include="Sua_tac_gia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sua_tac_gia.Designer.cs">
+      <DependentUpon>Sua_tac_gia.cs</DependentUpon>
+>>>>>>> huy
     </Compile>
     <Compile Include="Trang_chu.cs">
       <SubType>Form</SubType>
@@ -85,9 +183,27 @@
     <EmbeddedResource Include="Dang_ky.resx">
       <DependentUpon>Dang_ky.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Them_khach_hang.resx">
       <DependentUpon>Them_khach_hang.cs</DependentUpon>
     </EmbeddedResource>
+=======
+    <EmbeddedResource Include="linhvuc.resx">
+      <DependentUpon>linhvuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sua_tac_gia.aa.resx">
+      <DependentUpon>Sua_tac_gia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Them_khach_hang.resx">
+      <DependentUpon>Them_khach_hang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sua_tac_gia.resx">
+      <DependentUpon>Sua_tac_gia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="the_loai_sach.resx">
+      <DependentUpon>the_loai_sach.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> huy
     <EmbeddedResource Include="Trang_chu.resx">
       <DependentUpon>Trang_chu.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +212,14 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -110,10 +234,41 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QLBSDataSet.xsc">
+      <DependentUpon>QLBSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLBSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBSDataSet.xss">
+      <DependentUpon>QLBSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLBS_hoa_don.xsc">
+      <DependentUpon>QLBS_hoa_don.xsd</DependentUpon>
+    </None>
+    <None Include="QLBS_hoa_don.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBS_hoa_don.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBS_hoa_don.xss">
+      <DependentUpon>QLBS_hoa_don.xsd</DependentUpon>
+    </None>
     <None Include="Resources\backgrounds.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1026345.jpg" />
+    <Content Include="Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
     <Content Include="Resources\avatar.png" />
     <None Include="Resources\avatar1.png" />
     <None Include="Resources\key.png" />
@@ -125,5 +280,16 @@
     <None Include="Resources\sign-up-button.png" />
     <Content Include="Resources\user.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>
