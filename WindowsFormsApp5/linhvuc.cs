@@ -58,7 +58,6 @@ namespace WindowsFormsApp5
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
                 string selectedValue = row.Cells[0].Value.ToString(); 
                 textBox2.Text = selectedValue;
-
             }
         }
 

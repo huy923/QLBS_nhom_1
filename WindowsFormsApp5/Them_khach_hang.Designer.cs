@@ -28,17 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Them_khach_hang));
-            this.SuspendLayout();
-            // 
-            // Them_khach_hang
-            // 
-            resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "Them_khach_hang";
-            this.ResumeLayout(false);
-=======
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -236,13 +225,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.qLBShoadonBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
->>>>>>> huy
 
         }
 
         #endregion
-<<<<<<< HEAD
-=======
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem thêmKháchHàngToolStripMenuItem;
@@ -263,6 +249,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Ten_khach_hang;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ngay_ban;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tong_tien;
->>>>>>> huy
     }
 }

@@ -108,11 +108,11 @@
     <Compile Include="Tai_khoan.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="the_loai_sach.cs">
+    <Compile Include="The_loai_sach.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include=".Designer.cs">
-      <DependentUpon>the_loai_sach.cs</DependentUpon>
+      <DependentUpon>The_loai_sach.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="linhvuc.cs">
@@ -183,12 +183,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Them_khach_hang.resx">
       <DependentUpon>Them_khach_hang.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Sua_tac_gia.resx">
       <DependentUpon>Sua_tac_gia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="the_loai_sach.resx">
-      <DependentUpon>the_loai_sach.cs</DependentUpon>
+    <EmbeddedResource Include="The_loai_sach.resx">
+      <DependentUpon>The_loai_sach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Trang_chu.resx">
       <DependentUpon>Trang_chu.cs</DependentUpon>

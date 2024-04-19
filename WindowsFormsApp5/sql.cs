@@ -37,11 +37,7 @@ namespace WindowsFormsApp5
         {
             try
             {
-<<<<<<< HEAD
-                SqlCommand cmd = new SqlCommand($"INSERT INTO Tai_khoan ([user], pass) VALUES ('{user}', '{pass}')", con);
-=======
                 SqlCommand cmd = new SqlCommand($"INSERT INTO TAI_KHOAN ([USER], PASS) VALUES ('{user}', '{pass}')", con);
->>>>>>> huy
                 con.Open();
                 int i = cmd.ExecuteNonQuery();
                 con.Close();
@@ -69,11 +65,7 @@ namespace WindowsFormsApp5
         public void command(string CMD) {
             try
             {
-<<<<<<< HEAD
-                SqlCommand cmd = new SqlCommand($"UPDATE Tai_khoan SET [user] = '{newuser}', pass = '{newpass}' WHERE [user] = '{user}' AND pass = '{pass}';", con);
-=======
                 SqlCommand cmd = new SqlCommand(CMD, con);
->>>>>>> huy
                 con.Open();
                 int i = cmd.ExecuteNonQuery();
                 con.Close();

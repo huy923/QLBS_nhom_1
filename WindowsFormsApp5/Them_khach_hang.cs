@@ -12,16 +12,11 @@ namespace WindowsFormsApp5
 {
     public partial class Them_khach_hang : Form
     {
-<<<<<<< HEAD
-=======
         QLBS db = new QLBS();
->>>>>>> huy
         public Them_khach_hang()
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
-=======
         private void Them_khach_hang_Load(object sender, EventArgs e)
         {
 
@@ -46,6 +41,5 @@ namespace WindowsFormsApp5
             Application.Exit();
 
         }
->>>>>>> huy
     }
 }
