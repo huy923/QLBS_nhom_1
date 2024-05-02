@@ -4,17 +4,17 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="33ee8c860bde4c4c89346209ceb686a9" Name="Diagram1">
-        <EntityTypeShape EntityType="QLBSModel.Chi_tiet_hoa_don" Width="1.5" PointX="5.25" PointY="2.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBSModel.HoaDon" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBSModel.Kho" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBSModel.Linh_vuc" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBSModel.Loai_sach" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBSModel.Nha_xuat_ban" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBSModel.Sach" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBSModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBSModel.Tac_gia" Width="1.5" PointX="0.75" PointY="9.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBSModel.Tai_khoan" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+      <Diagram DiagramId="33ee8c860bde4c4c89346209ceb686a9" Name="Diagram1" ZoomLevel="97">
+        <EntityTypeShape EntityType="QLBSModel.Chi_tiet_hoa_don" Width="1.5" PointX="8.625" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBSModel.HoaDon" Width="1.5" PointX="6.375" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBSModel.Kho" Width="1.5" PointX="8.625" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBSModel.Linh_vuc" Width="1.5" PointX="4.125" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBSModel.Loai_sach" Width="1.5" PointX="4.125" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBSModel.Nha_xuat_ban" Width="1.5" PointX="4.125" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBSModel.Sach" Width="1.5" PointX="6.375" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBSModel.sysdiagram" Width="1.5" PointX="11.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBSModel.Tac_gia" Width="1.5" PointX="4.125" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBSModel.Tai_khoan" Width="1.5" PointX="11.125" PointY="3.5" IsExpanded="true" />
         <AssociationConnector Association="QLBSModel.FK_Chi_tiet_hao_don_HoaDon" ManuallyRouted="false" />
         <AssociationConnector Association="QLBSModel.FK_Chi_tiet_hao_don_Sach" ManuallyRouted="false" />
         <AssociationConnector Association="QLBSModel.FK_Kho_Sach" ManuallyRouted="false" />

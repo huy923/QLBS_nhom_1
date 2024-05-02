@@ -472,19 +472,19 @@
     <value>1</value>
   </data>
   <data name="maTGDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>MaTG</value>
+    <value>Mã tác giả</value>
   </data>
   <data name="tentacgiaDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Ten_tac_gia</value>
+    <value>Tên tác giả</value>
   </data>
   <data name="quequanDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Que_quan</value>
+    <value>Quê quán</value>
   </data>
   <data name="namsinhDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Nam_sinh</value>
+    <value>Năm sinh</value>
   </data>
   <data name="nammatDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Nam_mat</value>
+    <value>Năm mất</value>
   </data>
   <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 252</value>

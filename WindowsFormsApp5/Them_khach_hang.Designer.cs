@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.thêmKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmTácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,15 +42,15 @@
             this.hoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hoaDonTableAdapter = new WindowsFormsApp5.QLBS_hoa_donTableAdapters.HoaDonTableAdapter();
             this.hienthihoadon = new System.Windows.Forms.DataGridView();
-            this.chitiethaodonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.chi_tiet_hao_donTableAdapter = new WindowsFormsApp5.QLBS_hoa_donTableAdapters.Chi_tiet_hao_donTableAdapter();
-            this.fKChitiethaodonHoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLBShoadonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.MaHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ten_khach_hang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ngay_ban = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tong_tien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chitiethaodonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chi_tiet_hao_donTableAdapter = new WindowsFormsApp5.QLBS_hoa_donTableAdapters.Chi_tiet_hao_donTableAdapter();
+            this.fKChitiethaodonHoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLBShoadonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLBS_hoa_don)).BeginInit();
@@ -128,48 +130,37 @@
             // 
             this.hienthihoadon.AllowUserToAddRows = false;
             this.hienthihoadon.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hienthihoadon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.hienthihoadon.BackgroundColor = System.Drawing.Color.White;
             this.hienthihoadon.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.hienthihoadon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.hienthihoadon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.hienthihoadon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaHoaDon,
             this.Ten_khach_hang,
             this.Ngay_ban,
             this.Tong_tien});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.hienthihoadon.DefaultCellStyle = dataGridViewCellStyle3;
             this.hienthihoadon.Location = new System.Drawing.Point(9, 36);
             this.hienthihoadon.Name = "hienthihoadon";
             this.hienthihoadon.ReadOnly = true;
             this.hienthihoadon.Size = new System.Drawing.Size(1203, 276);
             this.hienthihoadon.TabIndex = 13;
-            // 
-            // chitiethaodonBindingSource
-            // 
-            this.chitiethaodonBindingSource.DataMember = "Chi_tiet_hao_don";
-            this.chitiethaodonBindingSource.DataSource = this.qLBS_hoa_don;
-            // 
-            // chi_tiet_hao_donTableAdapter
-            // 
-            this.chi_tiet_hao_donTableAdapter.ClearBeforeFill = true;
-            // 
-            // fKChitiethaodonHoaDonBindingSource
-            // 
-            this.fKChitiethaodonHoaDonBindingSource.DataMember = "FK_Chi_tiet_hao_don_HoaDon";
-            this.fKChitiethaodonHoaDonBindingSource.DataSource = this.hoaDonBindingSource;
-            // 
-            // qLBShoadonBindingSource
-            // 
-            this.qLBShoadonBindingSource.DataSource = this.qLBS_hoa_don;
-            this.qLBShoadonBindingSource.Position = 0;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(365, 566);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(93, 17);
-            this.listBox1.TabIndex = 14;
+            this.hienthihoadon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.hienthihoadon_CellContentClick);
             // 
             // MaHoaDon
             // 
@@ -199,6 +190,33 @@
             this.Tong_tien.Name = "Tong_tien";
             this.Tong_tien.ReadOnly = true;
             // 
+            // chitiethaodonBindingSource
+            // 
+            this.chitiethaodonBindingSource.DataMember = "Chi_tiet_hao_don";
+            this.chitiethaodonBindingSource.DataSource = this.qLBS_hoa_don;
+            // 
+            // chi_tiet_hao_donTableAdapter
+            // 
+            this.chi_tiet_hao_donTableAdapter.ClearBeforeFill = true;
+            // 
+            // fKChitiethaodonHoaDonBindingSource
+            // 
+            this.fKChitiethaodonHoaDonBindingSource.DataMember = "FK_Chi_tiet_hao_don_HoaDon";
+            this.fKChitiethaodonHoaDonBindingSource.DataSource = this.hoaDonBindingSource;
+            // 
+            // qLBShoadonBindingSource
+            // 
+            this.qLBShoadonBindingSource.DataSource = this.qLBS_hoa_don;
+            this.qLBShoadonBindingSource.Position = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(174, 386);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(251, 31);
+            this.textBox1.TabIndex = 14;
+            // 
             // Them_khach_hang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,7 +224,7 @@
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1256, 729);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.hienthihoadon);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.menuStrip1);
@@ -244,10 +262,10 @@
         private QLBS_hoa_donTableAdapters.Chi_tiet_hao_donTableAdapter chi_tiet_hao_donTableAdapter;
         private System.Windows.Forms.BindingSource fKChitiethaodonHoaDonBindingSource;
         private System.Windows.Forms.BindingSource qLBShoadonBindingSource;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHoaDon;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ten_khach_hang;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ngay_ban;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tong_tien;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

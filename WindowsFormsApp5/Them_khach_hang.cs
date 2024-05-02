@@ -41,5 +41,10 @@ namespace WindowsFormsApp5
             Application.Exit();
 
         }
+
+        private void hienthihoadon_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
