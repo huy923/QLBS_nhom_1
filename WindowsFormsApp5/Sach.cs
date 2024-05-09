@@ -16,10 +16,10 @@ namespace WindowsFormsApp5
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Sach()
-        {   
+        {
             this.Chi_tiet_hoa_don = new HashSet<Chi_tiet_hoa_don>();
         }
-
+    
         public string MaSach { get; set; }
         public string Ten_sach { get; set; }
         public string MaTG { get; set; }

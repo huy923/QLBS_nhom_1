@@ -99,6 +99,18 @@
     <Compile Include="Sach.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="sua_nha_suat_ban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sua_nha_suat_ban.Designer.cs">
+      <DependentUpon>sua_nha_suat_ban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sua_sach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sua_sach.Designer.cs">
+      <DependentUpon>sua_sach.cs</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagram.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -177,6 +189,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="linhvuc.resx">
       <DependentUpon>linhvuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sua_nha_suat_ban.resx">
+      <DependentUpon>sua_nha_suat_ban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sua_sach.resx">
+      <DependentUpon>sua_sach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sua_tac_gia.aa.resx">
       <DependentUpon>Sua_tac_gia.cs</DependentUpon>
