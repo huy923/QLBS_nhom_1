@@ -136,8 +136,10 @@
             // 
             // them
             // 
+            this.them.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.them.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             resources.ApplyResources(this.them, "them");
+            this.them.ForeColor = System.Drawing.SystemColors.ControlText;
             this.them.Name = "them";
             this.them.UseVisualStyleBackColor = false;
             this.them.Click += new System.EventHandler(this.them_Click);

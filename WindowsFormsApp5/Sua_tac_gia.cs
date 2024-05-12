@@ -39,7 +39,6 @@ namespace WindowsFormsApp5
             db.Tac_gia.Add(new_tac_Gia);
             db.SaveChanges();
             this.tac_giaTableAdapter.Fill(this.qLBSDataSet.Tac_gia);
-
         }
 
         private void Them_tac_gia_Load(object sender, EventArgs e)
