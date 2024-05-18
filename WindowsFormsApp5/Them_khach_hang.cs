@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,12 +37,12 @@ namespace WindowsFormsApp5
             var cthd = from hoadon in db.Chi_tiet_hoa_don select hoadon;
             foreach (var item in cthd)
             {
-                dataGridView1.Rows.Add(item.Ma_hoa_don, item.MaSach, item.Sach.Ten_sach, item.So_luong, item.Gia_tien, item.Thanh_tien);
+                dataGridView1.Rows.Add(item.Ma_hoa_don, item.MaSach, item.Sach.Ten_sach, item.So_luong, (int)item.Gia_tien.Value,(int)item.Thanh_tien.Value);
             }
             var gvsach = from ls in db.Saches select ls;
             foreach (var item in gvsach)
             {
-                dataGridView3.Rows.Add(item.MaSach, item.Ten_sach, item.Gia_bia, item.Tac_gia.Ten_tac_gia, item.Linh_vuc1.Linh_Vuc1, item.Lan_tai_ban, item.Nha_xuat_ban.Ten_nha_xuat_ban, item.Loai_sach1.Ten_loai_sach, item.Nam_xuat_ban);
+                dataGridView3.Rows.Add(item.MaSach, item.Ten_sach, (int)item.Gia_bia.Value, item.Tac_gia.Ten_tac_gia, item.Linh_vuc1.Linh_Vuc1, item.Lan_tai_ban, item.Nha_xuat_ban.Ten_nha_xuat_ban, item.Loai_sach1.Ten_loai_sach, item.Nam_xuat_ban);
             }
             textBox3.Text = GenerateNewMaHoaDon();
         }
@@ -53,6 +54,19 @@ namespace WindowsFormsApp5
 
         private void hienthihoadon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataGridViewRow selectedRow = hienthihoadon.Rows[e.RowIndex];
+            string mahd = selectedRow.Cells[0].Value.ToString();
+            string TenKhachHang = selectedRow.Cells[1].Value.ToString();
+            string ngaycu = selectedRow.Cells[2].Value.ToString();
+            textBox1.Text = TenKhachHang ?? "";
+            DateTime ngaylap = new DateTime();
+            if (DateTime.TryParse(ngaycu, out ngaylap))
+            {
+                dateTimePicker1.Value = ngaylap;
+            }
+            var chiTietHoaDon = db.Chi_tiet_hoa_don.Where(l => l.Ma_hoa_don == mahd).ToList();
+            int totalQuantity = chiTietHoaDon.Sum(ct => ct.So_luong ?? 0);
+            numericUpDown2.Value = totalQuantity > 0 ? totalQuantity : 0;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -103,28 +117,17 @@ namespace WindowsFormsApp5
                     try
                     {
                         var chiTietHoaDons = db.Chi_tiet_hoa_don.Where(ct => ct.Ma_hoa_don == maHoaDon).ToList();
-
                         if (chiTietHoaDons.Count == 0)
                         {
                             MessageBox.Show("Không có chi tiết hóa đơn nào để cập nhật!", "Thông báo");
                             return;
                         }
-
                         hoaDon.Ngay_ban = dateTimePicker2.Value;
                         hoaDon.Ten_khach_hang = textBox1.Text;
-
-                        decimal tongTien = 0;
-                        foreach (var chiTiet in chiTietHoaDons)
-                        {
-                            decimal giaBia = chiTiet.Sach.Gia_bia ?? 0; 
-                            int soLuong = chiTiet.So_luong ?? 0;
-                            tongTien += giaBia * soLuong;
-                        }
-
-                        hoaDon.Tong_tien = (int)tongTien;
-
+                        Chi_tiet_hoa_don ctedit = db.Chi_tiet_hoa_don.FirstOrDefault(ct => ct.Ma_hoa_don == maHoaDon);
+                        ctedit.So_luong = (int)numericUpDown2.Value;
+                        ctedit.Gia_tien = ctedit.Sach.Gia_bia.Value * numericUpDown2.Value;
                         db.SaveChanges();
-                        MessageBox.Show("ĐÃ SỬA!", "THÔNG BÁO");
                         nap();
                     }
                     catch (Exception ex)
@@ -147,88 +150,74 @@ namespace WindowsFormsApp5
         {
             if (string.IsNullOrEmpty(textBox2.Text))
             {
-                MessageBox.Show("Nhập tên khách hàng", "thông báo");
+                MessageBox.Show("Nhập tên khách hàng", "Thông báo");
                 return;
             }
 
-            if (dataGridView3.SelectedRows.Count == 1)
+            if (dataGridView3.SelectedRows.Count > 0)
             {
-                foreach (DataGridViewRow row in dataGridView3.Rows)
+                DataGridViewRow selectedRow = dataGridView3.SelectedRows[0];
+                string maSach = selectedRow.Cells[0].Value.ToString();
+                int soLuongMoi = (int)numericUpDown1.Value;
+                var khoSach = db.Khoes.FirstOrDefault(k => k.MaSach == maSach);
+                if (khoSach == null)
                 {
-                    if (dataGridView3.SelectedRows.Count > 0)
-                    {
-                        string maSach = row.Cells[0].Value.ToString();
-                        int soLuongMoi = (int)numericUpDown1.Value;
-
-                        var khoSach = db.Khoes.FirstOrDefault(k => k.MaSach == maSach);
-                        if (khoSach == null)
-                        {
-                            MessageBox.Show("không còn sách '" + row.Cells[1].Value.ToString() + "' trong kho", "Thông báo");
-                            return;
-                        }
-
-                        int soLuongHienTai = (int)khoSach.So_luong;
-                        int soLuongConLai = soLuongHienTai - soLuongMoi;
-
-                        if (soLuongConLai >= 0)
-                        {
-                            int giaSach = Convert.ToInt32(row.Cells[2].Value);
-                            int tongTien = giaSach * soLuongMoi;
-
-                            DateTime ngayLap = dateTimePicker2.Value;
-                            string maHoaDon = textBox3.Text; 
-                            HoaDon hoaDon = db.HoaDons.FirstOrDefault(hd => hd.MaHoaDon == maHoaDon);
-                            if (hoaDon == null)
-                            {
-                                hoaDon = new HoaDon
-                                {
-                                    MaHoaDon = maHoaDon,
-                                    Ten_khach_hang = textBox2.Text,
-                                    Ngay_ban = ngayLap,
-                                    Tong_tien = tongTien
-                                };
-                                db.HoaDons.Add(hoaDon);
-                            }
-                            else
-                            {
-                                hoaDon.Tong_tien += tongTien;
-                            }
-
-                            Chi_tiet_hoa_don chiTietHD = new Chi_tiet_hoa_don
-                            {
-                                Ma_hoa_don = maHoaDon,
-                                MaSach = maSach,
-                                So_luong = soLuongMoi,
-                                Gia_tien = giaSach,
-                                Thanh_tien = tongTien
-                            };
-                            db.Chi_tiet_hoa_don.Add(chiTietHD);
-
-                            khoSach.So_luong = soLuongConLai;
-
-                            db.SaveChanges();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Không còn sách '" + row.Cells[1].Value.ToString() + "' trong kho", "Thông báo");
-                        }
-
-                        nap();
-                        break;
-                    }
+                    MessageBox.Show("Không còn sách '" + selectedRow.Cells[1].Value.ToString() + "' trong kho", "Thông báo");
+                    return;
                 }
-            }
-            else if (dataGridView3.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Chưa chọn sách!", "Thông báo");
+
+                int soLuongHienTai = (int)khoSach.So_luong;
+                int soLuongConLai = soLuongHienTai - soLuongMoi;
+
+                if (soLuongConLai >= 0)
+                {
+                    int giaSach = Convert.ToInt32(selectedRow.Cells[2].Value);
+                    int tongTien = giaSach * soLuongMoi;
+
+                    DateTime ngayLap = dateTimePicker2.Value;
+                    string maHoaDon = textBox3.Text;
+                    HoaDon hoaDon = db.HoaDons.FirstOrDefault(hd => hd.MaHoaDon == maHoaDon);
+                    if (hoaDon == null)
+                    {
+                        hoaDon = new HoaDon
+                        {
+                            MaHoaDon = maHoaDon,
+                            Ten_khach_hang = textBox2.Text,
+                            Ngay_ban = ngayLap,
+                            Tong_tien = tongTien
+                        };
+                        db.HoaDons.Add(hoaDon);
+                    }
+                    else
+                    {
+                        hoaDon.Tong_tien += tongTien;
+                    }
+
+                    Chi_tiet_hoa_don chiTietHD = new Chi_tiet_hoa_don
+                    {
+                        Ma_hoa_don = maHoaDon,
+                        MaSach = maSach,
+                        So_luong = soLuongMoi,
+                        Gia_tien = giaSach,
+                        Thanh_tien = tongTien
+                    };
+                    db.Chi_tiet_hoa_don.Add(chiTietHD);
+                    khoSach.So_luong = soLuongConLai;
+                    db.SaveChanges();
+                }
+                else
+                {
+                    MessageBox.Show("Không còn sách '" + selectedRow.Cells["TenSachColumn"].Value.ToString() + "' trong kho", "Thông báo"); // Thay "TenSachColumn" bằng tên cột chứa tên sách
+                }
+                nap();
             }
             else
             {
-                MessageBox.Show("Chọn tường sách và nhập số lượng", "Thông báo");
+                MessageBox.Show("Vui lòng chọn một hàng trong bảng.", "Thông báo");
             }
-
-            numericUpDown1.Value = 1;
         }
+
+
         private string GenerateNewMaHoaDon()
         {
             var lastHoaDon = db.HoaDons.OrderByDescending(hd => hd.MaHoaDon).FirstOrDefault();
@@ -238,7 +227,7 @@ namespace WindowsFormsApp5
             if (lastHoaDon != null)
             {
                 string lastMaHoaDon = lastHoaDon.MaHoaDon;
-                string numberPart = lastMaHoaDon.Substring(2); 
+                string numberPart = lastMaHoaDon.Substring(2);
                 newNumber = int.Parse(numberPart) + 1;
             }
 

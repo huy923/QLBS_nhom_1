@@ -40,6 +40,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Them_khach_hang));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.thêmKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmTácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -756,6 +757,7 @@
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Them_khach_hang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa hóa đơn";
