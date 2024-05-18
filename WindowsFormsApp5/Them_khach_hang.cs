@@ -93,14 +93,61 @@ namespace WindowsFormsApp5
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (hienthihoadon.SelectedRows.Count == 1)
+            {
+                DataGridViewRow selectedRow = hienthihoadon.SelectedRows[0];
+                var maHoaDon = selectedRow.Cells[0].Value.ToString();
+                HoaDon hoaDon = db.HoaDons.FirstOrDefault(s => s.MaHoaDon == maHoaDon);
+                if (hoaDon != null)
+                {
+                    try
+                    {
+                        var chiTietHoaDons = db.Chi_tiet_hoa_don.Where(ct => ct.Ma_hoa_don == maHoaDon).ToList();
 
+                        if (chiTietHoaDons.Count == 0)
+                        {
+                            MessageBox.Show("Không có chi tiết hóa đơn nào để cập nhật!", "Thông báo");
+                            return;
+                        }
+
+                        hoaDon.Ngay_ban = dateTimePicker2.Value;
+                        hoaDon.Ten_khach_hang = textBox1.Text;
+
+                        decimal tongTien = 0;
+                        foreach (var chiTiet in chiTietHoaDons)
+                        {
+                            decimal giaBia = chiTiet.Sach.Gia_bia ?? 0; 
+                            int soLuong = chiTiet.So_luong ?? 0;
+                            tongTien += giaBia * soLuong;
+                        }
+
+                        hoaDon.Tong_tien = (int)tongTien;
+
+                        db.SaveChanges();
+                        MessageBox.Show("ĐÃ SỬA!", "THÔNG BÁO");
+                        nap();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Có lỗi xảy ra: " + ex.Message, "Thông báo lỗi");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy hóa đơn cần sửa!", "Thông báo");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một hóa đơn để sửa!", "Thông báo");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textBox2.Text))
             {
-                MessageBox.Show("NHẬP TÊN KHÁCH HÀNG!", "THÔNG BÁO");
+                MessageBox.Show("Nhập tên khách hàng", "thông báo");
                 return;
             }
 
@@ -116,7 +163,7 @@ namespace WindowsFormsApp5
                         var khoSach = db.Khoes.FirstOrDefault(k => k.MaSach == maSach);
                         if (khoSach == null)
                         {
-                            MessageBox.Show("KHÔNG CÒN SÁCH '" + row.Cells[1].Value.ToString() + "' TRONG KHO", "THÔNG BÁO");
+                            MessageBox.Show("không còn sách '" + row.Cells[1].Value.ToString() + "' trong kho", "Thông báo");
                             return;
                         }
 
@@ -163,7 +210,7 @@ namespace WindowsFormsApp5
                         }
                         else
                         {
-                            MessageBox.Show("KHÔNG CÒN SÁCH '" + row.Cells[1].Value.ToString() + "' TRONG KHO", "THÔNG BÁO");
+                            MessageBox.Show("Không còn sách '" + row.Cells[1].Value.ToString() + "' trong kho", "Thông báo");
                         }
 
                         nap();
@@ -173,20 +220,18 @@ namespace WindowsFormsApp5
             }
             else if (dataGridView3.SelectedRows.Count == 0)
             {
-                MessageBox.Show("CHƯA CHỌN SÁCH!", "THÔNG BÁO");
+                MessageBox.Show("Chưa chọn sách!", "Thông báo");
             }
             else
             {
-                MessageBox.Show("CHỌN TỪNG SÁCH VÀ NHẬP SỐ LƯỢNG!", "THÔNG BÁO");
+                MessageBox.Show("Chọn tường sách và nhập số lượng", "Thông báo");
             }
 
             numericUpDown1.Value = 1;
         }
         private string GenerateNewMaHoaDon()
         {
-            var lastHoaDon = db.HoaDons
-                               .OrderByDescending(hd => hd.MaHoaDon)
-                               .FirstOrDefault();
+            var lastHoaDon = db.HoaDons.OrderByDescending(hd => hd.MaHoaDon).FirstOrDefault();
 
             int newNumber = 1;
 
