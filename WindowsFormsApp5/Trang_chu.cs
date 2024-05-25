@@ -20,11 +20,11 @@ namespace WindowsFormsApp5
         public Trang_chu()
         {
             InitializeComponent();
+           
 
         }
         private void Form2_Load(object sender, EventArgs e)
         {
-            nap();
         }
         private void pictureBox5_Click(object sender, EventArgs e)
         {
@@ -43,13 +43,6 @@ namespace WindowsFormsApp5
             
 
         }
-        private void nap()
-        {
-            string sqlcmd = "SELECT TEN_SACH, LINH_VUC, GIA_MUA, GIA_BIA, SO_LUONG, GIA_TIEN, THANH_TIEN FROM SACH S JOIN CHI_TIET_HOA_DON D ON S.MASACH = D.MASACH";
-            Mydatabase newdata = new Mydatabase();
-            dataGridView1.DataSource =  newdata.GetData(sqlcmd);
-                
-        }
         private void sửaTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Sua_tac_gia sua_Tac_Gia = new Sua_tac_gia();
@@ -61,6 +54,34 @@ namespace WindowsFormsApp5
         {
             linhvuc linhvuc = new linhvuc();
             linhvuc.Show();
+            this.Hide();
+        }
+
+        private void sửaNXBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sua_nha_suat_ban suanxb = new sua_nha_suat_ban();
+            suanxb.Show();
+            this.Hide();
+        }
+
+        private void sửaKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sua_kho sua_Kho = new Sua_kho();
+            sua_Kho.Show();
+            this.Hide();
+        }
+
+        private void sửaSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sua_sach suasach = new sua_sach();
+            suasach.Show();
+            this.Hide();
+        }
+
+        private void thêmTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            the_loai_sach theloaisach = new the_loai_sach();
+            theloaisach.Show();
             this.Hide();
         }
     }

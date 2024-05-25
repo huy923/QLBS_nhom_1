@@ -155,5 +155,54 @@ namespace WindowsFormsApp5
                 MessageBox.Show("Vui lòng chọn một hàng để cập nhật.");
             }
         }
+
+        private void thêmTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Trang_chu trangchu = new Trang_chu();
+            trangchu.Show();
+            this.Hide();
+        }
+
+        private void thêmKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Them_khach_hang newkhach_hang = new Them_khach_hang();
+            newkhach_hang.Show();
+            this.Hide();
+        }
+
+        private void sửaTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sua_tac_gia sua_Tac_Gia = new Sua_tac_gia();
+            sua_Tac_Gia.Show();
+            this.Hide();
+        }
+
+        private void linhVựcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            linhvuc linhvuc = new linhvuc();
+            linhvuc.Show();
+            this.Hide();
+        }
+
+        private void sửaNXBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sua_nha_suat_ban suanxb = new sua_nha_suat_ban();
+            suanxb.Show();
+            this.Hide();
+        }
+
+        private void sửaSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sua_sach suasach = new sua_sach();
+            suasach.Show();
+            this.Hide();
+        }
+
+        private void thểLoạiSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            the_loai_sach theloaisach = new the_loai_sach();
+            theloaisach.Show();
+            this.Hide();
+        }
     }
 }

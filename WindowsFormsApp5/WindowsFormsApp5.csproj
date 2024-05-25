@@ -283,6 +283,7 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Content Include="Resources\93941.jpg" />
     <Content Include="Resources\avatar.png" />
     <None Include="Resources\avatar1.png" />
     <None Include="Resources\key.png" />
@@ -292,6 +293,7 @@
     <None Include="Resources\pexels.jpg" />
     <None Include="Resources\logo.ico" />
     <None Include="Resources\sign-up-button.png" />
+    <Content Include="Resources\th.jpg" />
     <Content Include="Resources\user.ico" />
   </ItemGroup>
   <ItemGroup>

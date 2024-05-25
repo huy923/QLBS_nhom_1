@@ -285,10 +285,10 @@
     <value>Thêm khách hàng</value>
   </data>
   <data name="thêmTácGiảToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 20</value>
+    <value>64, 20</value>
   </data>
   <data name="thêmTácGiảToolStripMenuItem.Text" xml:space="preserve">
-    <value>Thêm tác giả</value>
+    <value>Sửa NXB</value>
   </data>
   <data name="kiểmTraHóaĐơnToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 20</value>
@@ -301,6 +301,24 @@
   </data>
   <data name="lĩnhVựcToolStripMenuItem.Text" xml:space="preserve">
     <value>Lĩnh vực</value>
+  </data>
+  <data name="sửaSáchToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 20</value>
+  </data>
+  <data name="sửaSáchToolStripMenuItem.Text" xml:space="preserve">
+    <value>Sửa sách</value>
+  </data>
+  <data name="thểLoạiSáchToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 20</value>
+  </data>
+  <data name="thểLoạiSáchToolStripMenuItem.Text" xml:space="preserve">
+    <value>Thể loại sách</value>
+  </data>
+  <data name="sửaKhoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 20</value>
+  </data>
+  <data name="sửaKhoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Sửa kho</value>
   </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -408,9 +426,6 @@
   <metadata name="qLBSDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
   </metadata>
-  <metadata name="qLBSDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>132, 17</value>
-  </metadata>
   <metadata name="tac_giaTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>415, 17</value>
   </metadata>
@@ -486,6 +501,21 @@
   <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="maTGDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Mã tác giả</value>
+  </data>
+  <data name="tentacgiaDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Tên tác giả</value>
+  </data>
+  <data name="quequanDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Quê quán</value>
+  </data>
+  <data name="namsinhDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Năm sinh</value>
+  </data>
+  <data name="nammatDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Năm mất</value>
+  </data>
   <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 252</value>
   </data>
@@ -506,21 +536,6 @@
   </data>
   <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="maTGDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Mã tác giả</value>
-  </data>
-  <data name="tentacgiaDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Tên tác giả</value>
-  </data>
-  <data name="quequanDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Quê quán</value>
-  </data>
-  <data name="namsinhDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Năm sinh</value>
-  </data>
-  <data name="nammatDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Năm mất</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -546,6 +561,12 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Them_tac_gia</value>
   </data>
+  <data name="&gt;&gt;trangChủToolStripMenuItem.Name" xml:space="preserve">
+    <value>trangChủToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;trangChủToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;thêmKháchHàngToolStripMenuItem.Name" xml:space="preserve">
     <value>thêmKháchHàngToolStripMenuItem</value>
   </data>
@@ -568,6 +589,24 @@
     <value>lĩnhVựcToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;lĩnhVựcToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sửaSáchToolStripMenuItem.Name" xml:space="preserve">
+    <value>sửaSáchToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;sửaSáchToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;thểLoạiSáchToolStripMenuItem.Name" xml:space="preserve">
+    <value>thểLoạiSáchToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;thểLoạiSáchToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sửaKhoToolStripMenuItem.Name" xml:space="preserve">
+    <value>sửaKhoToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;sửaKhoToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tacgiaBindingSource.Name" xml:space="preserve">
@@ -617,12 +656,6 @@
   </data>
   <data name="&gt;&gt;nammatDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;trangChủToolStripMenuItem.Name" xml:space="preserve">
-    <value>trangChủToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;trangChủToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Sua_tac_gia</value>

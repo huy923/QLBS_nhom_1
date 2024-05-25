@@ -12,9 +12,6 @@ namespace WindowsFormsApp5
 {
     public partial class linhvuc : Form
     {
-        private Them_khach_hang themkhachhang;
-        private Sua_tac_gia suatacgia;
-        private Trang_chu trangchu;
         public linhvuc()
         {
             InitializeComponent();
@@ -96,6 +93,34 @@ namespace WindowsFormsApp5
         {
             Trang_chu trangchu = new Trang_chu();
             trangchu.Show();
+            this.Hide();
+        }
+
+        private void thêmTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            the_loai_sach theloaisach = new the_loai_sach();
+            theloaisach.Show();
+            this.Hide();
+        }
+
+        private void sửaNXBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sua_nha_suat_ban suanxb = new sua_nha_suat_ban();
+            suanxb.Show();
+            this.Hide();
+        }
+
+        private void sửaKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sua_kho sua_Kho = new Sua_kho();
+            sua_Kho.Show();
+            this.Hide();
+        }
+
+        private void sửaSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sua_sach suasach = new sua_sach();
+            suasach.Show();
             this.Hide();
         }
     }

@@ -21,4 +21,31 @@
                                 nap();
                             }
 
-                        }                         catch (Exception ex) { MessageBox.Show(ex.Message); }                     }                 }                 else                 {                     MessageBox.Show("Không tìm thấy nhà xuât bản cần xóa!");                 }             }             else             {                 MessageBox.Show("Vui lòng chọn một loại nhà xuất bản để xóa!");             }         }          private void pictureBox5_Click(object sender, EventArgs e)         {             Application.Exit();         }     } } 
+                        }                         catch (Exception ex) { MessageBox.Show(ex.Message); }                     }                 }                 else                 {                     MessageBox.Show("Không tìm thấy nhà xuât bản cần xóa!");                 }             }             else             {                 MessageBox.Show("Vui lòng chọn một loại nhà xuất bản để xóa!");             }         }          private void pictureBox5_Click(object sender, EventArgs e)         {             Application.Exit();         }
+
+        private void trangChủToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Trang_chu trangchu = new Trang_chu();
+            trangchu.Show();
+            this.Hide();
+        }
+
+        private void thêmKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Them_khach_hang newkhach_hang = new Them_khach_hang();
+            newkhach_hang.Show();
+            this.Hide();
+        }
+
+        private void thêmTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            the_loai_sach theloaisach = new the_loai_sach();
+            theloaisach.Show();
+            this.Hide();
+        }
+
+        private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+    } } 
