@@ -16,6 +16,9 @@ namespace WindowsFormsApp5
 {
     public partial class Sua_tac_gia : Form
     {
+        private Them_khach_hang themkhachhang;
+        private Sua_tac_gia suatacgia;
+        private linhvuc linhvuc;
         QLBS db = new QLBS();
         private int tacGiaCount = 0;
 
@@ -126,6 +129,32 @@ namespace WindowsFormsApp5
             {
                 MessageBox.Show("Vui lòng chọn một tác giả để xóa!");
             }
+        }
+
+        private void thêmKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Them_khach_hang newkhach_hang = new Them_khach_hang();
+            newkhach_hang.Show();
+            this.Hide();
+        }
+
+        private void thêmTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            linhvuc linhvuc = new linhvuc();
+            linhvuc.Show();
+            this.Hide();
+        }
+
+        private void trangChủToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Trang_chu trangchu = new Trang_chu();
+            trangchu.Show();
+            this.Hide();
         }
     }
 }

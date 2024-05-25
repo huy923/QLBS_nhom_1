@@ -12,10 +12,15 @@ namespace WindowsFormsApp5
 {
     public partial class Trang_chu : Form
     {
+        private Them_khach_hang themkhachhang;
+        private Sua_tac_gia suatacgia;
+        private linhvuc linhvuc;
+
 
         public Trang_chu()
         {
             InitializeComponent();
+
         }
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -47,14 +52,16 @@ namespace WindowsFormsApp5
         }
         private void sửaTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Sua_tac_gia tacgia = new Sua_tac_gia();
-            tacgia.Show();
+            Sua_tac_gia sua_Tac_Gia = new Sua_tac_gia();
+            sua_Tac_Gia.Show();
             this.Hide();
         }
 
         private void linhVựcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            linhvuc linhvuc = new linhvuc();
+            linhvuc.Show();
+            this.Hide();
         }
     }
 }
