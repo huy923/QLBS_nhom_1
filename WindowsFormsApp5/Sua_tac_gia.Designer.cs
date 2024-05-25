@@ -40,6 +40,7 @@
             this.thêmKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmTácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kiểmTraHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lĩnhVựcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.them = new System.Windows.Forms.Button();
             this.nam_sinh = new System.Windows.Forms.DateTimePicker();
@@ -55,6 +56,7 @@
             this.quequanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namsinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nammatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tacgiaBindingSource)).BeginInit();
@@ -103,9 +105,11 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.trangChủToolStripMenuItem,
             this.thêmKháchHàngToolStripMenuItem,
             this.thêmTácGiảToolStripMenuItem,
-            this.kiểmTraHóaĐơnToolStripMenuItem});
+            this.kiểmTraHóaĐơnToolStripMenuItem,
+            this.lĩnhVựcToolStripMenuItem});
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
@@ -113,16 +117,24 @@
             // 
             this.thêmKháchHàngToolStripMenuItem.Name = "thêmKháchHàngToolStripMenuItem";
             resources.ApplyResources(this.thêmKháchHàngToolStripMenuItem, "thêmKháchHàngToolStripMenuItem");
+            this.thêmKháchHàngToolStripMenuItem.Click += new System.EventHandler(this.thêmKháchHàngToolStripMenuItem_Click);
             // 
             // thêmTácGiảToolStripMenuItem
             // 
             this.thêmTácGiảToolStripMenuItem.Name = "thêmTácGiảToolStripMenuItem";
             resources.ApplyResources(this.thêmTácGiảToolStripMenuItem, "thêmTácGiảToolStripMenuItem");
+            this.thêmTácGiảToolStripMenuItem.Click += new System.EventHandler(this.thêmTácGiảToolStripMenuItem_Click);
             // 
             // kiểmTraHóaĐơnToolStripMenuItem
             // 
             this.kiểmTraHóaĐơnToolStripMenuItem.Name = "kiểmTraHóaĐơnToolStripMenuItem";
             resources.ApplyResources(this.kiểmTraHóaĐơnToolStripMenuItem, "kiểmTraHóaĐơnToolStripMenuItem");
+            // 
+            // lĩnhVựcToolStripMenuItem
+            // 
+            this.lĩnhVựcToolStripMenuItem.Name = "lĩnhVựcToolStripMenuItem";
+            resources.ApplyResources(this.lĩnhVựcToolStripMenuItem, "lĩnhVựcToolStripMenuItem");
+            this.lĩnhVựcToolStripMenuItem.Click += new System.EventHandler(this.lĩnhVựcToolStripMenuItem_Click);
             // 
             // pictureBox5
             // 
@@ -247,6 +259,12 @@
             this.nammatDataGridViewTextBoxColumn.Name = "nammatDataGridViewTextBoxColumn";
             this.nammatDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // trangChủToolStripMenuItem
+            // 
+            this.trangChủToolStripMenuItem.Name = "trangChủToolStripMenuItem";
+            resources.ApplyResources(this.trangChủToolStripMenuItem, "trangChủToolStripMenuItem");
+            this.trangChủToolStripMenuItem.Click += new System.EventHandler(this.trangChủToolStripMenuItem_Click);
+            // 
             // Sua_tac_gia
             // 
             resources.ApplyResources(this, "$this");
@@ -307,5 +325,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quequanDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn namsinhDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nammatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripMenuItem lĩnhVựcToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trangChủToolStripMenuItem;
     }
 }

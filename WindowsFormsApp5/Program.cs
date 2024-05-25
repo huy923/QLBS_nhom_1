@@ -16,7 +16,11 @@ namespace WindowsFormsApp5
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new linhvuc());        
+=======
+            Application.Run(new Sua_tac_gia());         
+>>>>>>> 31c2e842d770074a5e47990b13343c399290a6bc
         }
     }
 }

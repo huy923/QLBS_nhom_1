@@ -272,6 +272,12 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="trangChủToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 20</value>
+  </data>
+  <data name="trangChủToolStripMenuItem.Text" xml:space="preserve">
+    <value>Trang chủ</value>
+  </data>
   <data name="thêmKháchHàngToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 20</value>
   </data>
@@ -289,6 +295,12 @@
   </data>
   <data name="kiểmTraHóaĐơnToolStripMenuItem.Text" xml:space="preserve">
     <value>Kiểm tra hóa đơn</value>
+  </data>
+  <data name="lĩnhVựcToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 20</value>
+  </data>
+  <data name="lĩnhVựcToolStripMenuItem.Text" xml:space="preserve">
+    <value>Lĩnh vực</value>
   </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -396,6 +408,9 @@
   <metadata name="qLBSDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
   </metadata>
+  <metadata name="qLBSDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>132, 17</value>
+  </metadata>
   <metadata name="tac_giaTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>415, 17</value>
   </metadata>
@@ -471,21 +486,6 @@
   <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="maTGDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Mã tác giả</value>
-  </data>
-  <data name="tentacgiaDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Tên tác giả</value>
-  </data>
-  <data name="quequanDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Quê quán</value>
-  </data>
-  <data name="namsinhDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Năm sinh</value>
-  </data>
-  <data name="nammatDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Năm mất</value>
-  </data>
   <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 252</value>
   </data>
@@ -506,6 +506,21 @@
   </data>
   <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="maTGDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Mã tác giả</value>
+  </data>
+  <data name="tentacgiaDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Tên tác giả</value>
+  </data>
+  <data name="quequanDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Quê quán</value>
+  </data>
+  <data name="namsinhDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Năm sinh</value>
+  </data>
+  <data name="nammatDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Năm mất</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -547,6 +562,12 @@
     <value>kiểmTraHóaĐơnToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;kiểmTraHóaĐơnToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lĩnhVựcToolStripMenuItem.Name" xml:space="preserve">
+    <value>lĩnhVựcToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;lĩnhVựcToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tacgiaBindingSource.Name" xml:space="preserve">
@@ -596,6 +617,12 @@
   </data>
   <data name="&gt;&gt;nammatDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;trangChủToolStripMenuItem.Name" xml:space="preserve">
+    <value>trangChủToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;trangChủToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Sua_tac_gia</value>
