@@ -12,9 +12,6 @@ namespace WindowsFormsApp5
 {
     public partial class linhvuc : Form
     {
-        private Them_khach_hang themkhachhang;
-        private Sua_tac_gia suatacgia;
-        private Trang_chu trangchu;
         public linhvuc()
         {
             InitializeComponent();

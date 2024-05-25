@@ -16,9 +16,6 @@ namespace WindowsFormsApp5
 {
     public partial class Sua_tac_gia : Form
     {
-        private Them_khach_hang themkhachhang;
-        private Sua_tac_gia suatacgia;
-        private linhvuc linhvuc;
         QLBS db = new QLBS();
         private int tacGiaCount = 0;
 
