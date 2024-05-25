@@ -11,8 +11,9 @@ using System.Security.Cryptography;
 namespace WindowsFormsApp5
 {
     class Mydatabase
-    {
-        private string connectstring = @"Data Source=DESKTOP-DQ8VDI6\SQLEXPRESS;Initial Catalog=QLBS;Integrated Security=True";
+    {                                        
+        //private string connectstring = @"Data Source=DESKTOP-DQ8VDI6\SQLEXPRESS;Initial Catalog=QLBS;Integrated Security=True";
+        private string connectstring = @"Data Source=DESKTOP-K513OM9;Initial Catalog=QLBS;Integrated Security=True";
         private SqlConnection con;
         public Mydatabase()
         {

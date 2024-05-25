@@ -12,11 +12,6 @@ namespace WindowsFormsApp5
 {
     public partial class Trang_chu : Form
     {
-        private Them_khach_hang themkhachhang;
-        private Sua_tac_gia suatacgia;
-        private linhvuc linhvuc;
-
-
         public Trang_chu()
         {
             InitializeComponent();
