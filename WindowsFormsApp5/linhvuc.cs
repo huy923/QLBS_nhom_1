@@ -86,7 +86,9 @@ namespace WindowsFormsApp5
 
         private void linhVựcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            linhvuc newl = new linhvuc();
+            newl.Show();
+            this.Hide();
         }
 
         private void trangChủToolStripMenuItem_Click(object sender, EventArgs e)
@@ -121,6 +123,13 @@ namespace WindowsFormsApp5
         {
             sua_sach suasach = new sua_sach();
             suasach.Show();
+            this.Hide();
+        }
+
+        private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            linhvuc lv = new linhvuc();
+            lv.Show();
             this.Hide();
         }
     }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Ten_nha_xuat_ban = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -41,13 +41,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.trangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmTácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kiểmTraHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sửaTácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.linhVựcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sửaNXBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sửaKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sửaSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lĩnhVựcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -61,25 +61,25 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Ten_nha_xuat_ban});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(0, 32);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -210,16 +210,23 @@
             this.trangChủToolStripMenuItem,
             this.thêmKháchHàngToolStripMenuItem,
             this.thêmTácGiảToolStripMenuItem,
-            this.kiểmTraHóaĐơnToolStripMenuItem,
-            this.lĩnhVựcToolStripMenuItem,
             this.sửaTácGiảToolStripMenuItem,
-            this.linhVựcToolStripMenuItem,
-            this.sửaKhoToolStripMenuItem});
+            this.sửaNXBToolStripMenuItem,
+            this.sửaKhoToolStripMenuItem,
+            this.sửaSáchToolStripMenuItem,
+            this.lĩnhVựcToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(965, 24);
             this.menuStrip1.TabIndex = 39;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // trangChủToolStripMenuItem
+            // 
+            this.trangChủToolStripMenuItem.Name = "trangChủToolStripMenuItem";
+            this.trangChủToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.trangChủToolStripMenuItem.Text = "Trang chủ";
+            this.trangChủToolStripMenuItem.Click += new System.EventHandler(this.trangChủToolStripMenuItem_Click);
             // 
             // thêmKháchHàngToolStripMenuItem
             // 
@@ -235,43 +242,38 @@
             this.thêmTácGiảToolStripMenuItem.Text = "Thể loại sách";
             this.thêmTácGiảToolStripMenuItem.Click += new System.EventHandler(this.thêmTácGiảToolStripMenuItem_Click);
             // 
-            // kiểmTraHóaĐơnToolStripMenuItem
-            // 
-            this.kiểmTraHóaĐơnToolStripMenuItem.Name = "kiểmTraHóaĐơnToolStripMenuItem";
-            this.kiểmTraHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
-            this.kiểmTraHóaĐơnToolStripMenuItem.Text = "Kiểm tra hóa đơn";
-            // 
             // sửaTácGiảToolStripMenuItem
             // 
             this.sửaTácGiảToolStripMenuItem.Name = "sửaTácGiảToolStripMenuItem";
             this.sửaTácGiảToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.sửaTácGiảToolStripMenuItem.Text = "Sửa tác giả";
+            this.sửaTácGiảToolStripMenuItem.Click += new System.EventHandler(this.sửaTácGiảToolStripMenuItem_Click);
             // 
-            // linhVựcToolStripMenuItem
+            // sửaNXBToolStripMenuItem
             // 
-            this.linhVựcToolStripMenuItem.Name = "linhVựcToolStripMenuItem";
-            this.linhVựcToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
-            this.linhVựcToolStripMenuItem.Text = "Lĩnh vực";
-            // 
-            // trangChủToolStripMenuItem
-            // 
-            this.trangChủToolStripMenuItem.Name = "trangChủToolStripMenuItem";
-            this.trangChủToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.trangChủToolStripMenuItem.Text = "Trang chủ";
-            this.trangChủToolStripMenuItem.Click += new System.EventHandler(this.trangChủToolStripMenuItem_Click);
+            this.sửaNXBToolStripMenuItem.Name = "sửaNXBToolStripMenuItem";
+            this.sửaNXBToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.sửaNXBToolStripMenuItem.Text = "Sửa NXB";
+            this.sửaNXBToolStripMenuItem.Click += new System.EventHandler(this.sửaNXBToolStripMenuItem_Click);
             // 
             // sửaKhoToolStripMenuItem
             // 
             this.sửaKhoToolStripMenuItem.Name = "sửaKhoToolStripMenuItem";
             this.sửaKhoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.sửaKhoToolStripMenuItem.Text = "Sửa kho";
+            this.sửaKhoToolStripMenuItem.Click += new System.EventHandler(this.sửaKhoToolStripMenuItem_Click);
+            // 
+            // sửaSáchToolStripMenuItem
+            // 
+            this.sửaSáchToolStripMenuItem.Name = "sửaSáchToolStripMenuItem";
+            this.sửaSáchToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.sửaSáchToolStripMenuItem.Text = "Sửa sách";
+            this.sửaSáchToolStripMenuItem.Click += new System.EventHandler(this.sửaSáchToolStripMenuItem_Click);
             // 
             // lĩnhVựcToolStripMenuItem
             // 
             this.lĩnhVựcToolStripMenuItem.Name = "lĩnhVựcToolStripMenuItem";
-            this.lĩnhVựcToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
-            this.lĩnhVựcToolStripMenuItem.Text = "Lĩnh vực";
-            this.lĩnhVựcToolStripMenuItem.Click += new System.EventHandler(this.lĩnhVựcToolStripMenuItem_Click);
+            this.lĩnhVựcToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
             // 
             // sua_nha_suat_ban
             // 
@@ -313,15 +315,15 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ten_nha_xuat_ban;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem trangChủToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thêmKháchHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thêmTácGiảToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kiểmTraHóaĐơnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sửaTácGiảToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem linhVựcToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ten_nha_xuat_ban;
-        private System.Windows.Forms.ToolStripMenuItem trangChủToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sửaNXBToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sửaKhoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sửaSáchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lĩnhVựcToolStripMenuItem;
     }
 }

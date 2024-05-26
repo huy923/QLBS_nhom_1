@@ -156,13 +156,6 @@ namespace WindowsFormsApp5
             }
         }
 
-        private void thêmTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Trang_chu trangchu = new Trang_chu();
-            trangchu.Show();
-            this.Hide();
-        }
-
         private void thêmKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Them_khach_hang newkhach_hang = new Them_khach_hang();
@@ -179,8 +172,22 @@ namespace WindowsFormsApp5
 
         private void linhVựcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            linhvuc linhvuc = new linhvuc();
-            linhvuc.Show();
+            linhvuc newl = new linhvuc();
+            newl.Show();
+            this.Hide();
+        }
+
+        private void trangChủToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Trang_chu trangchu = new Trang_chu();
+            trangchu.Show();
+            this.Hide();
+        }
+
+        private void thêmTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            the_loai_sach theloaisach = new the_loai_sach();
+            theloaisach.Show();
             this.Hide();
         }
 
@@ -191,6 +198,13 @@ namespace WindowsFormsApp5
             this.Hide();
         }
 
+        private void sửaKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sua_kho sua_Kho = new Sua_kho();
+            sua_Kho.Show();
+            this.Hide();
+        }
+
         private void sửaSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             sua_sach suasach = new sua_sach();
@@ -198,10 +212,10 @@ namespace WindowsFormsApp5
             this.Hide();
         }
 
-        private void thểLoạiSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            the_loai_sach theloaisach = new the_loai_sach();
-            theloaisach.Show();
+            linhvuc lv = new linhvuc();
+            lv.Show();
             this.Hide();
         }
     }

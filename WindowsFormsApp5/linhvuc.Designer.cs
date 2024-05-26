@@ -28,14 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.trangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmTácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kiểmTraHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sửaTácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sửaNXBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sửaKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sửaSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lĩnhVựcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
@@ -45,9 +48,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.sửaNXBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sửaKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sửaSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -59,11 +59,11 @@
             this.trangChủToolStripMenuItem,
             this.thêmKháchHàngToolStripMenuItem,
             this.thêmTácGiảToolStripMenuItem,
-            this.kiểmTraHóaĐơnToolStripMenuItem,
             this.sửaTácGiảToolStripMenuItem,
             this.sửaNXBToolStripMenuItem,
             this.sửaKhoToolStripMenuItem,
-            this.sửaSáchToolStripMenuItem});
+            this.sửaSáchToolStripMenuItem,
+            this.lĩnhVựcToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(965, 24);
@@ -91,18 +91,40 @@
             this.thêmTácGiảToolStripMenuItem.Text = "Thể loại sách";
             this.thêmTácGiảToolStripMenuItem.Click += new System.EventHandler(this.thêmTácGiảToolStripMenuItem_Click);
             // 
-            // kiểmTraHóaĐơnToolStripMenuItem
-            // 
-            this.kiểmTraHóaĐơnToolStripMenuItem.Name = "kiểmTraHóaĐơnToolStripMenuItem";
-            this.kiểmTraHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
-            this.kiểmTraHóaĐơnToolStripMenuItem.Text = "Kiểm tra hóa đơn";
-            // 
             // sửaTácGiảToolStripMenuItem
             // 
             this.sửaTácGiảToolStripMenuItem.Name = "sửaTácGiảToolStripMenuItem";
             this.sửaTácGiảToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.sửaTácGiảToolStripMenuItem.Text = "Sửa tác giả";
             this.sửaTácGiảToolStripMenuItem.Click += new System.EventHandler(this.sửaTácGiảToolStripMenuItem_Click);
+            // 
+            // sửaNXBToolStripMenuItem
+            // 
+            this.sửaNXBToolStripMenuItem.Name = "sửaNXBToolStripMenuItem";
+            this.sửaNXBToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.sửaNXBToolStripMenuItem.Text = "Sửa NXB";
+            this.sửaNXBToolStripMenuItem.Click += new System.EventHandler(this.sửaNXBToolStripMenuItem_Click);
+            // 
+            // sửaKhoToolStripMenuItem
+            // 
+            this.sửaKhoToolStripMenuItem.Name = "sửaKhoToolStripMenuItem";
+            this.sửaKhoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.sửaKhoToolStripMenuItem.Text = "Sửa kho";
+            this.sửaKhoToolStripMenuItem.Click += new System.EventHandler(this.sửaKhoToolStripMenuItem_Click);
+            // 
+            // sửaSáchToolStripMenuItem
+            // 
+            this.sửaSáchToolStripMenuItem.Name = "sửaSáchToolStripMenuItem";
+            this.sửaSáchToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.sửaSáchToolStripMenuItem.Text = "Sửa sách";
+            this.sửaSáchToolStripMenuItem.Click += new System.EventHandler(this.sửaSáchToolStripMenuItem_Click);
+            // 
+            // lĩnhVựcToolStripMenuItem
+            // 
+            this.lĩnhVựcToolStripMenuItem.Name = "lĩnhVựcToolStripMenuItem";
+            this.lĩnhVựcToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.lĩnhVựcToolStripMenuItem.Text = "Lĩnh vực";
+            this.lĩnhVựcToolStripMenuItem.Click += new System.EventHandler(this.lĩnhVựcToolStripMenuItem_Click);
             // 
             // pictureBox5
             // 
@@ -123,23 +145,23 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(12, 27);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(911, 377);
@@ -222,27 +244,6 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // sửaNXBToolStripMenuItem
-            // 
-            this.sửaNXBToolStripMenuItem.Name = "sửaNXBToolStripMenuItem";
-            this.sửaNXBToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
-            this.sửaNXBToolStripMenuItem.Text = "Sửa NXB";
-            this.sửaNXBToolStripMenuItem.Click += new System.EventHandler(this.sửaNXBToolStripMenuItem_Click);
-            // 
-            // sửaKhoToolStripMenuItem
-            // 
-            this.sửaKhoToolStripMenuItem.Name = "sửaKhoToolStripMenuItem";
-            this.sửaKhoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.sửaKhoToolStripMenuItem.Text = "Sửa kho";
-            this.sửaKhoToolStripMenuItem.Click += new System.EventHandler(this.sửaKhoToolStripMenuItem_Click);
-            // 
-            // sửaSáchToolStripMenuItem
-            // 
-            this.sửaSáchToolStripMenuItem.Name = "sửaSáchToolStripMenuItem";
-            this.sửaSáchToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.sửaSáchToolStripMenuItem.Text = "Sửa sách";
-            this.sửaSáchToolStripMenuItem.Click += new System.EventHandler(this.sửaSáchToolStripMenuItem_Click);
-            // 
             // linhvuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -262,6 +263,7 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "linhvuc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "linhvuc";
             this.Load += new System.EventHandler(this.linhvuc_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -278,7 +280,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem thêmKháchHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thêmTácGiảToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kiểmTraHóaĐơnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sửaTácGiảToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -293,5 +294,6 @@
         private System.Windows.Forms.ToolStripMenuItem sửaNXBToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sửaKhoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sửaSáchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lĩnhVựcToolStripMenuItem;
     }
 }

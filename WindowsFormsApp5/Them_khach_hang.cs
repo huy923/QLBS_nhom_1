@@ -234,6 +234,27 @@ namespace WindowsFormsApp5
             return "HD" + newNumber.ToString("D2");
         }
 
+        private void thêmKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Them_khach_hang newkhach_hang = new Them_khach_hang();
+            newkhach_hang.Show();
+            this.Hide();
+        }
+
+        private void sửaTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sua_tac_gia sua_Tac_Gia = new Sua_tac_gia();
+            sua_Tac_Gia.Show();
+            this.Hide();
+        }
+
+        private void linhVựcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            linhvuc newl = new linhvuc();
+            newl.Show();
+            this.Hide();
+        }
+
         private void trangChủToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Trang_chu trangchu = new Trang_chu();
@@ -248,24 +269,17 @@ namespace WindowsFormsApp5
             this.Hide();
         }
 
-        private void sửaTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Sua_tac_gia sua_Tac_Gia = new Sua_tac_gia();
-            sua_Tac_Gia.Show();
-            this.Hide();
-        }
-
-        private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            linhvuc linhvuc = new linhvuc();
-            linhvuc.Show();
-            this.Hide();
-        }
-
         private void sửaNXBToolStripMenuItem_Click(object sender, EventArgs e)
         {
             sua_nha_suat_ban suanxb = new sua_nha_suat_ban();
             suanxb.Show();
+            this.Hide();
+        }
+
+        private void sửaKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sua_kho sua_Kho = new Sua_kho();
+            sua_Kho.Show();
             this.Hide();
         }
 
@@ -276,10 +290,10 @@ namespace WindowsFormsApp5
             this.Hide();
         }
 
-        private void sửaKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Sua_kho sua_Kho = new Sua_kho();
-            sua_Kho.Show();
+            linhvuc lv = new linhvuc();
+            lv.Show();
             this.Hide();
         }
     }

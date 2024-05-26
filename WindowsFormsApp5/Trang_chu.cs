@@ -25,7 +25,11 @@ namespace WindowsFormsApp5
         {
             Application.Exit();
         }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
 
+        }
         private void thêmKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Them_khach_hang newkhach_hang = new Them_khach_hang();
@@ -33,11 +37,6 @@ namespace WindowsFormsApp5
             this.Hide();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-
-        }
         private void sửaTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Sua_tac_gia sua_Tac_Gia = new Sua_tac_gia();
@@ -47,8 +46,22 @@ namespace WindowsFormsApp5
 
         private void linhVựcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            linhvuc linhvuc = new linhvuc();
-            linhvuc.Show();
+            linhvuc newl = new linhvuc();
+            newl.Show();
+            this.Hide();
+        }
+
+        private void trangChủToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Trang_chu trangchu = new Trang_chu();
+            trangchu.Show();
+            this.Hide();
+        }
+
+        private void thêmTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            the_loai_sach theloaisach = new the_loai_sach();
+            theloaisach.Show();
             this.Hide();
         }
 
@@ -73,10 +86,10 @@ namespace WindowsFormsApp5
             this.Hide();
         }
 
-        private void thêmTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            the_loai_sach theloaisach = new the_loai_sach();
-            theloaisach.Show();
+            linhvuc lv = new linhvuc();
+            lv.Show();
             this.Hide();
         }
     }

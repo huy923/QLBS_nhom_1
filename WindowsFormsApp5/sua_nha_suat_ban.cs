@@ -23,17 +23,31 @@
 
                         }                         catch (Exception ex) { MessageBox.Show(ex.Message); }                     }                 }                 else                 {                     MessageBox.Show("Không tìm thấy nhà xuât bản cần xóa!");                 }             }             else             {                 MessageBox.Show("Vui lòng chọn một loại nhà xuất bản để xóa!");             }         }          private void pictureBox5_Click(object sender, EventArgs e)         {             Application.Exit();         }
 
-        private void trangChủToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Trang_chu trangchu = new Trang_chu();
-            trangchu.Show();
-            this.Hide();
-        }
-
         private void thêmKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Them_khach_hang newkhach_hang = new Them_khach_hang();
             newkhach_hang.Show();
+            this.Hide();
+        }
+
+        private void sửaTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sua_tac_gia sua_Tac_Gia = new Sua_tac_gia();
+            sua_Tac_Gia.Show();
+            this.Hide();
+        }
+
+        private void linhVựcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            linhvuc newl = new linhvuc();
+            newl.Show();
+            this.Hide();
+        }
+
+        private void trangChủToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Trang_chu trangchu = new Trang_chu();
+            trangchu.Show();
             this.Hide();
         }
 
@@ -44,8 +58,31 @@
             this.Hide();
         }
 
+        private void sửaNXBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sua_nha_suat_ban suanxb = new sua_nha_suat_ban();
+            suanxb.Show();
+            this.Hide();
+        }
+
+        private void sửaKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sua_kho sua_Kho = new Sua_kho();
+            sua_Kho.Show();
+            this.Hide();
+        }
+
+        private void sửaSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sua_sach suasach = new sua_sach();
+            suasach.Show();
+            this.Hide();
+        }
+
         private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            linhvuc lv = new linhvuc();
+            lv.Show();
+            this.Hide();
         }
     } } 

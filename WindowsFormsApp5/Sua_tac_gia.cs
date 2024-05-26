@@ -127,7 +127,6 @@ namespace WindowsFormsApp5
                 MessageBox.Show("Vui lòng chọn một tác giả để xóa!");
             }
         }
-
         private void thêmKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Them_khach_hang newkhach_hang = new Them_khach_hang();
@@ -135,17 +134,17 @@ namespace WindowsFormsApp5
             this.Hide();
         }
 
-        private void thêmTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        private void sửaTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            sua_nha_suat_ban suanxb  = new sua_nha_suat_ban();
-            suanxb.Show();
+            Sua_tac_gia sua_Tac_Gia = new Sua_tac_gia();
+            sua_Tac_Gia.Show();
             this.Hide();
         }
 
-        private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
+        private void linhVựcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            linhvuc linhvuc = new linhvuc();
-            linhvuc.Show();
+            linhvuc newl = new linhvuc();
+            newl.Show();
             this.Hide();
         }
 
@@ -156,17 +155,17 @@ namespace WindowsFormsApp5
             this.Hide();
         }
 
-        private void sửaSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        private void thêmTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            sua_sach suasach  = new sua_sach();
-            suasach.Show();
+            the_loai_sach theloaisach = new the_loai_sach();
+            theloaisach.Show();
             this.Hide();
         }
 
-        private void thểLoạiSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        private void sửaNXBToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            the_loai_sach theloaisach  = new the_loai_sach();
-            theloaisach.Show();
+            sua_nha_suat_ban suanxb = new sua_nha_suat_ban();
+            suanxb.Show();
             this.Hide();
         }
 
@@ -174,6 +173,20 @@ namespace WindowsFormsApp5
         {
             Sua_kho sua_Kho = new Sua_kho();
             sua_Kho.Show();
+            this.Hide();
+        }
+
+        private void sửaSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sua_sach suasach = new sua_sach();
+            suasach.Show();
+            this.Hide();
+        }
+
+        private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            linhvuc lv = new linhvuc();
+            lv.Show();
             this.Hide();
         }
     }
