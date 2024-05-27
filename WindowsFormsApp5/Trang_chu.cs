@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 namespace WindowsFormsApp5
@@ -16,20 +18,27 @@ namespace WindowsFormsApp5
         public Trang_chu()
         {
             InitializeComponent();
-           
-
         }
         private void Form2_Load(object sender, EventArgs e)
         {
             nap();
+            label3.Text = DateTime.Now.ToString("dddd, dd/MM/yyyy");
         }
         private void nap()
         {
             var gvsach = from ls in db.Saches select ls;
             foreach (var item in gvsach)
             {
-                dataGridView3.Rows.Add(item.Ten_sach, item.Tac_gia.Ten_tac_gia, item.Linh_vuc1.Linh_Vuc1,item.Loai_sach1.Ten_loai_sach, item.Gia_bia,item.Lan_tai_ban,item.Ten_nha_xuat_ban,item.Nam_xuat_ban);
+                dataGridView3.Rows.Add(item.Ten_sach, item.Tac_gia.Ten_tac_gia, item.Linh_vuc1.Linh_Vuc1, item.Loai_sach1.Ten_loai_sach, item.Gia_bia, item.Lan_tai_ban, item.Ten_nha_xuat_ban, item.Nam_xuat_ban);
             }
+            var doanhthu = db.HoaDons
+                             .Where(sj => DbFunctions.TruncateTime(sj.Ngay_ban) == DbFunctions.TruncateTime(DateTime.Today))
+                             .Sum(sj => sj.Tong_tien);
+            textBox1.Text = doanhthu.ToString();
+            var soluong = db.HoaDons
+                            .Where(ji => DbFunctions.TruncateTime(ji.Ngay_ban) == DbFunctions.TruncateTime(DateTime.Today))
+                            .Count();
+            textBox2.Text = soluong.ToString();
         }
         private void pictureBox5_Click(object sender, EventArgs e)
         {
@@ -101,6 +110,11 @@ namespace WindowsFormsApp5
             linhvuc lv = new linhvuc();
             lv.Show();
             this.Hide();
+        }
+
+        private void pictureBox5_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
