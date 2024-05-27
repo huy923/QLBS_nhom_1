@@ -575,6 +575,7 @@
             this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView3.Size = new System.Drawing.Size(589, 260);
             this.dataGridView3.TabIndex = 34;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 

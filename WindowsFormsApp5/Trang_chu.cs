@@ -12,6 +12,7 @@ namespace WindowsFormsApp5
 {
     public partial class Trang_chu : Form
     {
+        QLBS db = new QLBS();
         public Trang_chu()
         {
             InitializeComponent();
@@ -20,6 +21,15 @@ namespace WindowsFormsApp5
         }
         private void Form2_Load(object sender, EventArgs e)
         {
+            nap();
+        }
+        private void nap()
+        {
+            var gvsach = from ls in db.Saches select ls;
+            foreach (var item in gvsach)
+            {
+                dataGridView3.Rows.Add(item.Ten_sach, item.Tac_gia.Ten_tac_gia, item.Linh_vuc1.Linh_Vuc1,item.Loai_sach1.Ten_loai_sach, item.Gia_bia,item.Lan_tai_ban,item.Ten_nha_xuat_ban,item.Nam_xuat_ban);
+            }
         }
         private void pictureBox5_Click(object sender, EventArgs e)
         {

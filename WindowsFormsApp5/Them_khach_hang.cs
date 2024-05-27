@@ -296,5 +296,10 @@ namespace WindowsFormsApp5
             lv.Show();
             this.Hide();
         }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
