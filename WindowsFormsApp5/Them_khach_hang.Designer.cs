@@ -42,17 +42,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Them_khach_hang));
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.qLBS_hoa_don = new WindowsFormsApp5.QLBS_hoa_don();
-            this.hoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hoaDonTableAdapter = new WindowsFormsApp5.QLBS_hoa_donTableAdapters.HoaDonTableAdapter();
             this.hienthihoadon = new System.Windows.Forms.DataGridView();
             this.MaHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ten_khach_hang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ngay_ban = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tong_tien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chitiethaodonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.chi_tiet_hao_donTableAdapter = new WindowsFormsApp5.QLBS_hoa_donTableAdapters.Chi_tiet_hao_donTableAdapter();
-            this.fKChitiethaodonHoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLBShoadonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -102,11 +96,7 @@
             this.sửaSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lĩnhVựcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLBS_hoa_don)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoaDonBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hienthihoadon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chitiethaodonBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKChitiethaodonHoaDonBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLBShoadonBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -129,20 +119,6 @@
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
-            // qLBS_hoa_don
-            // 
-            this.qLBS_hoa_don.DataSetName = "QLBS_hoa_don";
-            this.qLBS_hoa_don.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // hoaDonBindingSource
-            // 
-            this.hoaDonBindingSource.DataMember = "HoaDon";
-            this.hoaDonBindingSource.DataSource = this.qLBS_hoa_don;
-            // 
-            // hoaDonTableAdapter
-            // 
-            this.hoaDonTableAdapter.ClearBeforeFill = true;
             // 
             // hienthihoadon
             // 
@@ -221,25 +197,6 @@
             this.Tong_tien.Name = "Tong_tien";
             this.Tong_tien.ReadOnly = true;
             this.Tong_tien.Width = 123;
-            // 
-            // chitiethaodonBindingSource
-            // 
-            this.chitiethaodonBindingSource.DataMember = "Chi_tiet_hao_don";
-            this.chitiethaodonBindingSource.DataSource = this.qLBS_hoa_don;
-            // 
-            // chi_tiet_hao_donTableAdapter
-            // 
-            this.chi_tiet_hao_donTableAdapter.ClearBeforeFill = true;
-            // 
-            // fKChitiethaodonHoaDonBindingSource
-            // 
-            this.fKChitiethaodonHoaDonBindingSource.DataMember = "FK_Chi_tiet_hao_don_HoaDon";
-            this.fKChitiethaodonHoaDonBindingSource.DataSource = this.hoaDonBindingSource;
-            // 
-            // qLBShoadonBindingSource
-            // 
-            this.qLBShoadonBindingSource.DataSource = this.qLBS_hoa_don;
-            this.qLBShoadonBindingSource.Position = 0;
             // 
             // textBox1
             // 
@@ -802,11 +759,7 @@
             this.Text = "Sửa hóa đơn";
             this.Load += new System.EventHandler(this.Them_khach_hang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLBS_hoa_don)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoaDonBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hienthihoadon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chitiethaodonBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKChitiethaodonHoaDonBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLBShoadonBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -821,13 +774,7 @@
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox5;
-        private QLBS_hoa_don qLBS_hoa_don;
-        private System.Windows.Forms.BindingSource hoaDonBindingSource;
-        private QLBS_hoa_donTableAdapters.HoaDonTableAdapter hoaDonTableAdapter;
         private System.Windows.Forms.DataGridView hienthihoadon;
-        private System.Windows.Forms.BindingSource chitiethaodonBindingSource;
-        private QLBS_hoa_donTableAdapters.Chi_tiet_hao_donTableAdapter chi_tiet_hao_donTableAdapter;
-        private System.Windows.Forms.BindingSource fKChitiethaodonHoaDonBindingSource;
         private System.Windows.Forms.BindingSource qLBShoadonBindingSource;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

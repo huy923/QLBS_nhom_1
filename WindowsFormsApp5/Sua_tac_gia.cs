@@ -35,15 +35,37 @@ namespace WindowsFormsApp5
             new_tac_Gia.Nam_mat = nam_mat.Value;
             string maTacGia = "TG" + (++tacGiaCount).ToString("D2");
             new_tac_Gia.MaTG = maTacGia;
-
             db.Tac_gia.Add(new_tac_Gia);
             db.SaveChanges();
-            this.tac_giaTableAdapter.Fill(this.qLBSDataSet.Tac_gia);
+            nap();
         }
+        private void nap()
+        {
+            dataGridView1.Rows.Clear();
+            dataGridView1.Columns.Clear();
+            dataGridView1.Columns.Add("MaTG", "Mã TG");
+            dataGridView1.Columns.Add("Ten_tac_gia", "Tên Tác Giả");
+            dataGridView1.Columns.Add("Que_quan", "Quê Quán");
+            dataGridView1.Columns.Add("Nam_sinh", "Năm Sinh");
+            dataGridView1.Columns.Add("Nam_mat", "Năm Mất");
+            var query = from ls in db.Tac_gia
+                        select new
+                        {
+                            ls.MaTG,
+                            ls.Ten_tac_gia,
+                            ls.Que_quan,
+                            ls.Nam_sinh,
+                            ls.Nam_mat
+                        };
 
+            foreach (var ls in query)
+            {
+                dataGridView1.Rows.Add(ls.MaTG, ls.Ten_tac_gia, ls.Que_quan, ls.Nam_sinh, ls.Nam_mat);
+            }
+        }
         private void Them_tac_gia_Load(object sender, EventArgs e)
         {
-            this.tac_giaTableAdapter.Fill(this.qLBSDataSet.Tac_gia);
+            nap();
         }
         private void pictureBox5_Click(object sender, EventArgs e)
         {
@@ -61,12 +83,12 @@ namespace WindowsFormsApp5
             DateTime namSinhDate = new DateTime();
             if (DateTime.TryParse(namSinh, out namSinhDate))
             {
-                nam_sinh.Value = namSinhDate;
+                dateTimeNamsinh.Value = namSinhDate;
             }
             DateTime namMatDate = new DateTime();
             if (DateTime.TryParse(namMat, out namMatDate))
             {
-                nam_mat.Value = namMatDate;
+                dateTimeNamsinnammat.Value = namMatDate;
             }
         }
         private void button1_Click(object sender, EventArgs e)
@@ -87,7 +109,7 @@ namespace WindowsFormsApp5
                     tacGiaToUpdate.Nam_sinh = namSinh;
                     tacGiaToUpdate.Nam_mat = namMat;
                     db.SaveChanges();
-                    this.tac_giaTableAdapter.Fill(this.qLBSDataSet.Tac_gia);
+                    nap();
                     MessageBox.Show("Đã cập nhật thông tin tác giả thành công!");
                 }
                 else
@@ -113,7 +135,7 @@ namespace WindowsFormsApp5
                     {
                         db.Tac_gia.Remove(tacGiaToDelete);
                         db.SaveChanges();
-                        dataGridView1.Rows.Remove(dataGridView1.SelectedRows[0]);
+                        nap();
                         MessageBox.Show("Đã xóa tác giả thành công!");
                     }
                 }

@@ -16,7 +16,7 @@ namespace WindowsFormsApp5
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Trang_chu());         
+            Application.Run(new Them_khach_hang());         
         }
     }
 }

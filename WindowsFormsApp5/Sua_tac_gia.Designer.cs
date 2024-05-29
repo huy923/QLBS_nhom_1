@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sua_tac_gia));
             this.ten = new System.Windows.Forms.TextBox();
             this.que = new System.Windows.Forms.TextBox();
@@ -38,19 +37,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.them = new System.Windows.Forms.Button();
-            this.nam_sinh = new System.Windows.Forms.DateTimePicker();
-            this.tacgiaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLBSDataSet = new WindowsFormsApp5.QLBSDataSet();
-            this.tac_giaTableAdapter = new WindowsFormsApp5.QLBSDataSetTableAdapters.Tac_giaTableAdapter();
-            this.nam_mat = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.maTGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tentacgiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quequanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namsinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nammatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.trangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,9 +49,9 @@
             this.sửaKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sửaSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lĩnhVựcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dateTimeNamsinh = new System.Windows.Forms.DateTimePicker();
+            this.dateTimeNamsinnammat = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tacgiaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLBSDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -125,32 +114,6 @@
             this.them.UseVisualStyleBackColor = false;
             this.them.Click += new System.EventHandler(this.them_Click);
             // 
-            // nam_sinh
-            // 
-            resources.ApplyResources(this.nam_sinh, "nam_sinh");
-            this.nam_sinh.Name = "nam_sinh";
-            this.nam_sinh.Value = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
-            // 
-            // tacgiaBindingSource
-            // 
-            this.tacgiaBindingSource.DataMember = "Tac_gia";
-            this.tacgiaBindingSource.DataSource = this.qLBSDataSet;
-            // 
-            // qLBSDataSet
-            // 
-            this.qLBSDataSet.DataSetName = "QLBSDataSet";
-            this.qLBSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tac_giaTableAdapter
-            // 
-            this.tac_giaTableAdapter.ClearBeforeFill = true;
-            // 
-            // nam_mat
-            // 
-            resources.ApplyResources(this.nam_mat, "nam_mat");
-            this.nam_mat.Name = "nam_mat";
-            this.nam_mat.Value = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -171,62 +134,14 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maTGDataGridViewTextBoxColumn,
-            this.tentacgiaDataGridViewTextBoxColumn,
-            this.quequanDataGridViewTextBoxColumn,
-            this.namsinhDataGridViewTextBoxColumn,
-            this.nammatDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tacgiaBindingSource;
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // maTGDataGridViewTextBoxColumn
-            // 
-            this.maTGDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.maTGDataGridViewTextBoxColumn.DataPropertyName = "MaTG";
-            resources.ApplyResources(this.maTGDataGridViewTextBoxColumn, "maTGDataGridViewTextBoxColumn");
-            this.maTGDataGridViewTextBoxColumn.Name = "maTGDataGridViewTextBoxColumn";
-            this.maTGDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tentacgiaDataGridViewTextBoxColumn
-            // 
-            this.tentacgiaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tentacgiaDataGridViewTextBoxColumn.DataPropertyName = "Ten_tac_gia";
-            resources.ApplyResources(this.tentacgiaDataGridViewTextBoxColumn, "tentacgiaDataGridViewTextBoxColumn");
-            this.tentacgiaDataGridViewTextBoxColumn.Name = "tentacgiaDataGridViewTextBoxColumn";
-            this.tentacgiaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // quequanDataGridViewTextBoxColumn
-            // 
-            this.quequanDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.quequanDataGridViewTextBoxColumn.DataPropertyName = "Que_quan";
-            resources.ApplyResources(this.quequanDataGridViewTextBoxColumn, "quequanDataGridViewTextBoxColumn");
-            this.quequanDataGridViewTextBoxColumn.Name = "quequanDataGridViewTextBoxColumn";
-            this.quequanDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // namsinhDataGridViewTextBoxColumn
-            // 
-            this.namsinhDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.namsinhDataGridViewTextBoxColumn.DataPropertyName = "Nam_sinh";
-            resources.ApplyResources(this.namsinhDataGridViewTextBoxColumn, "namsinhDataGridViewTextBoxColumn");
-            this.namsinhDataGridViewTextBoxColumn.Name = "namsinhDataGridViewTextBoxColumn";
-            this.namsinhDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nammatDataGridViewTextBoxColumn
-            // 
-            this.nammatDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nammatDataGridViewTextBoxColumn.DataPropertyName = "Nam_mat";
-            resources.ApplyResources(this.nammatDataGridViewTextBoxColumn, "nammatDataGridViewTextBoxColumn");
-            this.nammatDataGridViewTextBoxColumn.Name = "nammatDataGridViewTextBoxColumn";
-            this.nammatDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // menuStrip1
             // 
@@ -289,16 +204,26 @@
             this.lĩnhVựcToolStripMenuItem.Name = "lĩnhVựcToolStripMenuItem";
             resources.ApplyResources(this.lĩnhVựcToolStripMenuItem, "lĩnhVựcToolStripMenuItem");
             // 
+            // dateTimeNamsinh
+            // 
+            resources.ApplyResources(this.dateTimeNamsinh, "dateTimeNamsinh");
+            this.dateTimeNamsinh.Name = "dateTimeNamsinh";
+            // 
+            // dateTimeNamsinnammat
+            // 
+            resources.ApplyResources(this.dateTimeNamsinnammat, "dateTimeNamsinnammat");
+            this.dateTimeNamsinnammat.Name = "dateTimeNamsinnammat";
+            // 
             // Sua_tac_gia
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
+            this.Controls.Add(this.dateTimeNamsinnammat);
+            this.Controls.Add(this.dateTimeNamsinh);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.nam_mat);
-            this.Controls.Add(this.nam_sinh);
             this.Controls.Add(this.them);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label4);
@@ -312,8 +237,6 @@
             this.Name = "Sua_tac_gia";
             this.Load += new System.EventHandler(this.Them_tac_gia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tacgiaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLBSDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -332,19 +255,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button them;
-        private System.Windows.Forms.DateTimePicker nam_sinh;
-        private QLBSDataSet qLBSDataSet;
-        private System.Windows.Forms.BindingSource tacgiaBindingSource;
-        private QLBSDataSetTableAdapters.Tac_giaTableAdapter tac_giaTableAdapter;
-        private System.Windows.Forms.DateTimePicker nam_mat;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn maTGDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tentacgiaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quequanDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namsinhDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nammatDataGridViewTextBoxColumn;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem trangChủToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thêmKháchHàngToolStripMenuItem;
@@ -354,5 +269,9 @@
         private System.Windows.Forms.ToolStripMenuItem sửaKhoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sửaSáchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lĩnhVựcToolStripMenuItem;
+        private System.Windows.Forms.DateTimePicker nam_sinh;
+        private System.Windows.Forms.DateTimePicker nam_mat;
+        private System.Windows.Forms.DateTimePicker dateTimeNamsinh;
+        private System.Windows.Forms.DateTimePicker dateTimeNamsinnammat;
     }
 }
