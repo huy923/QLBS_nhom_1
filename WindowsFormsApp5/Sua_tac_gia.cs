@@ -43,7 +43,7 @@ namespace WindowsFormsApp5
 
         private void Them_tac_gia_Load(object sender, EventArgs e)
         {
-            this.tac_giaTableAdapter.Fill(this.qLBSDataSet.Tac_gia);
+            nap();
         }
         private void pictureBox5_Click(object sender, EventArgs e)
         {
