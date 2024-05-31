@@ -11,6 +11,8 @@ using System.Linq.Expressions;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Data.Entity.Core.Metadata.Edm;
+using System.Threading;
 
 namespace WindowsFormsApp5
 {
@@ -43,7 +45,7 @@ namespace WindowsFormsApp5
 
         private void Them_tac_gia_Load(object sender, EventArgs e)
         {
-            nap();
+            this.tac_giaTableAdapter.Fill(this.qLBSDataSet.Tac_gia);
         }
         private void pictureBox5_Click(object sender, EventArgs e)
         {
