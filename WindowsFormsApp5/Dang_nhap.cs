@@ -53,13 +53,27 @@ namespace WindowsFormsApp5
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string name = txtuser.Text;
-            string pass = txtpass.Text;
+            string pass = txtuser.Text;
+            string name = txtpass.Text;
+
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                MessageBox.Show("Bạn chưa nhập tên tài khoản!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(pass))
+            {
+                MessageBox.Show("Bạn chưa nhập mật khẩu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 Mydatabase database = new Mydatabase();
-                string querry = $"SELECT * FROM Tai_khoan WHERE [user] = '{name}' AND pass = '{pass}'";
-                DataTable ta = database.GetData(querry);
+                string query = $"SELECT * FROM Tai_khoan WHERE [user] = '{name}' AND pass = '{pass}'";
+                DataTable ta = database.GetData(query);
+
                 if (ta.Rows.Count > 0)
                 {
                     Trang_chu form2 = new Trang_chu();
@@ -68,14 +82,14 @@ namespace WindowsFormsApp5
                 }
                 else
                 {
-                    MessageBox.Show("Invalid login details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtuser.Text = "";
                     txtpass.Text = "";
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("Error: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
