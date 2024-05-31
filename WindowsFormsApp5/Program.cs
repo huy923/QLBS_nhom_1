@@ -8,15 +8,13 @@ namespace WindowsFormsApp5
 {
     internal static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+       
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Trang_chu());         
+            Application.Run(new Sua_tac_gia());         
         }
     }
 }
