@@ -33,8 +33,8 @@ namespace WindowsFormsApp5
 
             new_tac_Gia.Ten_tac_gia = ten.Text;
             new_tac_Gia.Que_quan = que.Text;
-            new_tac_Gia.Nam_sinh = nam_sinh.Value;
-            new_tac_Gia.Nam_mat = nam_mat.Value;
+            new_tac_Gia.Nam_sinh = dateTimeNamsinh.Value;
+            new_tac_Gia.Nam_mat = dateTimeNamsinnammat.Value;
             string maTacGia = "TG" + (++tacGiaCount).ToString("D2");
             new_tac_Gia.MaTG = maTacGia;
             db.Tac_gia.Add(new_tac_Gia);
@@ -99,8 +99,8 @@ namespace WindowsFormsApp5
             {
                 string tenTacGia = ten.Text;
                 string quenQuan = que.Text;
-                DateTime namSinh = nam_sinh.Value;
-                DateTime namMat = nam_mat.Value;
+                DateTime namSinh = dateTimeNamsinh.Value;
+                DateTime namMat = dateTimeNamsinnammat.Value;
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
                 string tacGiaID = selectedRow.Cells[0].Value.ToString(); 
                 Tac_gia tacGiaToUpdate = db.Tac_gia.FirstOrDefault(tg => tg.MaTG == tacGiaID);

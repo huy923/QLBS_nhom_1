@@ -258,8 +258,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maTGDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tentacgiaDataGridViewTextBoxColumn;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn maTGDataGridViewTextBoxColumn;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn tentacgiaDataGridViewTextBoxColumn;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem trangChủToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thêmKháchHàngToolStripMenuItem;
@@ -269,8 +269,8 @@
         private System.Windows.Forms.ToolStripMenuItem sửaKhoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sửaSáchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lĩnhVựcToolStripMenuItem;
-        private System.Windows.Forms.DateTimePicker nam_sinh;
-        private System.Windows.Forms.DateTimePicker nam_mat;
+        //private System.Windows.Forms.DateTimePicker nam_sinh;
+        //private System.Windows.Forms.DateTimePicker nam_mat;
         private System.Windows.Forms.DateTimePicker dateTimeNamsinh;
         private System.Windows.Forms.DateTimePicker dateTimeNamsinnammat;
     }
