@@ -339,6 +339,7 @@
             this.label3.Size = new System.Drawing.Size(534, 37);
             this.label3.TabIndex = 40;
             this.label3.Text = "Thứ xxxx, ngày yy, tháng zz, năm tttt";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Trang_chu
             // 

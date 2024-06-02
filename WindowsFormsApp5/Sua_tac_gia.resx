@@ -324,60 +324,6 @@
   <data name="&gt;&gt;them.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="nam_sinh.Location" type="System.Drawing.Point, System.Drawing">
-    <value>719, 51</value>
-  </data>
-  <data name="nam_sinh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 31</value>
-  </data>
-  <data name="nam_sinh.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;nam_sinh.Name" xml:space="preserve">
-    <value>nam_sinh</value>
-  </data>
-  <data name="&gt;&gt;nam_sinh.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nam_sinh.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;nam_sinh.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <metadata name="tacgiaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>252, 17</value>
-  </metadata>
-  <metadata name="qLBSDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>132, 17</value>
-  </metadata>
-  <metadata name="qLBSDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>132, 17</value>
-  </metadata>
-  <metadata name="tac_giaTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>415, 17</value>
-  </metadata>
-  <data name="nam_mat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>719, 108</value>
-  </data>
-  <data name="nam_mat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 31</value>
-  </data>
-  <data name="nam_mat.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;nam_mat.Name" xml:space="preserve">
-    <value>nam_mat</value>
-  </data>
-  <data name="&gt;&gt;nam_mat.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nam_mat.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;nam_mat.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
     <value>529, 168</value>
   </data>
@@ -400,7 +346,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -427,7 +373,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 252</value>
@@ -448,25 +394,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="maTGDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Mã tác giả</value>
-  </data>
-  <data name="tentacgiaDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Tên tác giả</value>
-  </data>
-  <data name="quequanDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Quê quán</value>
-  </data>
-  <data name="namsinhDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Năm sinh</value>
-  </data>
-  <data name="nammatDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Năm mất</value>
+    <value>2</value>
   </data>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>575, 17</value>
+    <value>180, 17</value>
   </metadata>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -537,11 +468,53 @@
   <data name="lĩnhVựcToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 20</value>
   </data>
+  <data name="dateTimeNamsinh.Location" type="System.Drawing.Point, System.Drawing">
+    <value>704, 50</value>
+  </data>
+  <data name="dateTimeNamsinh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>361, 31</value>
+  </data>
+  <data name="dateTimeNamsinh.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;dateTimeNamsinh.Name" xml:space="preserve">
+    <value>dateTimeNamsinh</value>
+  </data>
+  <data name="&gt;&gt;dateTimeNamsinh.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dateTimeNamsinh.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dateTimeNamsinh.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dateTimeNamsinnammat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>702, 108</value>
+  </data>
+  <data name="dateTimeNamsinnammat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>361, 31</value>
+  </data>
+  <data name="dateTimeNamsinnammat.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;dateTimeNamsinnammat.Name" xml:space="preserve">
+    <value>dateTimeNamsinnammat</value>
+  </data>
+  <data name="&gt;&gt;dateTimeNamsinnammat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dateTimeNamsinnammat.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dateTimeNamsinnammat.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>48</value>
+    <value>41</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>12, 25</value>
@@ -563,54 +536,6 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Them_tac_gia</value>
-  </data>
-  <data name="&gt;&gt;tacgiaBindingSource.Name" xml:space="preserve">
-    <value>tacgiaBindingSource</value>
-  </data>
-  <data name="&gt;&gt;tacgiaBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;qLBSDataSet.Name" xml:space="preserve">
-    <value>qLBSDataSet</value>
-  </data>
-  <data name="&gt;&gt;qLBSDataSet.Type" xml:space="preserve">
-    <value>WindowsFormsApp5.QLBSDataSet, QLBSDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;tac_giaTableAdapter.Name" xml:space="preserve">
-    <value>tac_giaTableAdapter</value>
-  </data>
-  <data name="&gt;&gt;tac_giaTableAdapter.Type" xml:space="preserve">
-    <value>WindowsFormsApp5.QLBSDataSetTableAdapters.Tac_giaTableAdapter, QLBSDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;maTGDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>maTGDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;maTGDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tentacgiaDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>tentacgiaDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;tentacgiaDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;quequanDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>quequanDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;quequanDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;namsinhDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>namsinhDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;namsinhDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nammatDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>nammatDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;nammatDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;trangChủToolStripMenuItem.Name" xml:space="preserve">
     <value>trangChủToolStripMenuItem</value>

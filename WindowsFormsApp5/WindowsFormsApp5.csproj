@@ -15,6 +15,21 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -139,16 +154,6 @@
     <Compile Include="linhvuc.Designer.cs">
       <DependentUpon>linhvuc.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLBSDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLBSDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="QLBS_hoa_don.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLBS_hoa_don.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Them_khach_hang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,28 +253,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="QLBSDataSet.xsc">
-      <DependentUpon>QLBSDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLBSDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLBSDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLBSDataSet.xss">
-      <DependentUpon>QLBSDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLBS_hoa_don.xsc">
-      <DependentUpon>QLBS_hoa_don.xsd</DependentUpon>
-    </None>
-    <None Include="QLBS_hoa_don.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLBS_hoa_don.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLBS_hoa_don.xss">
-      <DependentUpon>QLBS_hoa_don.xsd</DependentUpon>
-    </None>
     <None Include="Resources\backgrounds.png" />
   </ItemGroup>
   <ItemGroup>
@@ -298,6 +281,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
